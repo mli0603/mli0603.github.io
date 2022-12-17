@@ -25,7 +25,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
     
-    <script src="js/app.js"></script>
+    <script src="js/video_comparison.js"></script>
 </head>
 
 <body>
@@ -99,13 +99,11 @@
                     <ul class="nav nav-pills nav-justified">
                         <li>
                             <a href="https://arxiv.org/abs/2111.09337">
-                            <image src="img/paper_image.png" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                         <li>
                             <a href="https://github.com/facebookresearch/CODD">
-                            <image src="img/github.png" height="60px">
                                 <h4><strong>Code</strong></h4>
                             </a>
                         </li>
@@ -114,7 +112,20 @@
         </div>
 
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-10 col-md-offset-1">
+                <p class="text-justify">
+                    We propose <b>Consistent Online Dynamic Depth (CODD)</b>, a framework for consistent depth consistency in <b>dynamic environments</b> (camera motion, object motion and object deformation) and <b>online settings</b> (no future information and real-time inference).
+                    Temporally consistent depth estimation is crucial for 3D visualization in mixed reality applications.
+                    Otherwise, the jitters in depth corrupt the perceptual quality significantly. 
+                    However, temporal consistency is <span style="color: red">largely overlooked</span>.
+                    <b>CODD</b> solves this notoriously difficult problem by integrating a novel <span style="color: rgb(44, 93, 156);">motion network</span> and <span style="color: rgb(44, 93, 156);">fusion network</span> with per-frame depth estimation solutions.
+                    <b>CODD</b> improves temporal consistency in depth significantly while producing accurate estimates, for both static background and dynamic foreground objects.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
                 <h3>
                     Overview Video
                 </h3>
@@ -126,45 +137,114 @@
             </div>
         </div>
 
-        <br></br>
+        <br>
 
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-10 col-md-offset-1">
                 <h3>
-                    Abstract
+                    Demo
                 </h3>
-                <image src="img/overview.png" class="img-responsive" alt="overview"><br>
-                <p class="text-justify">
-                    <b>Temporally consistent depth estimation</b> is crucial for online applications such as mixed reality. 
-                    However, it is While stereo depth estimation has received substantial attention as a promising way to generate 3D information, there is relatively little work focused on maintaining temporal stability. Indeed, based on our analysis, current techniques still suffer from poor temporal consistency. Stabilizing depth temporally in dynamic scenes is challenging due to concurrent object and camera motion. In an online setting, this process is further aggravated because only past frames are available. We present a framework named <i>Consistent Online Dynamic Depth</i> (CODD) to produce temporally consistent depth estimates in dynamic scenes in an online setting. CODD augments per-frame stereo networks with novel motion and fusion networks. The motion network accounts for object and camera motion by predicting a per-pixel SE3 transformation. The fusion network improves temporal consistency in predictions by aggregating the current and previous estimates. We conduct extensive experiments across varied datasets (synthetic, outdoor, indoor and medical). We demonstrate that CODD outperforms competing methods in terms of temporal consistency and performs on par in terms of per-frame accuracy quantitatively and qualitatively.
-                </p>
-            </div>
-        </div>
-            
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Citation
-                </h3>
-                <div class="form-group col-md-10 col-md-offset-1">
-                    <textarea id="bibtex" class="form-control" readonly>
-@article{li2021temporally,
-title={Temporally Consistent Online Depth Estimation in Dynamic Scenes},
-author={Li, Zhaoshuo and Ye, Wei and Wang, Dilin and Creighton, Francis X and Taylor, Russell H and Venkatesh, Ganesh and Unberath, Mathias},
-journal={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
-year={2023}
-}</textarea>
+                <p>Move your mouse to compare the results! Switching back and forth quickly for better comparison.</p>
+                <!--  video comparison code adapted from RefNerf -->
+                <h4>Indoor scene</h4> 
+                <div class="video-compare-container" id="indoorDiv">
+                    <video class="video" id="indoor" loop playsinline autoPlay muted src="assets/demo_indoor.mov" onplay="resizeAndPlay(this)"></video>
+                    <canvas height=0 class="videoMerge" id="indoorMerge"></canvas>
+                </div>
+                <h4>Outdoor scene</h4>
+                <div class="video-compare-container" id="outdoorDiv">
+                    <video class="video" id="outdoor" loop playsinline autoPlay muted src="assets/demo_outdoor.mov" onplay="resizeAndPlay(this)"></video>
+                    <canvas height=0 class="videoMerge" id="outdoorMerge"></canvas>
+                </div>
+                <h4>Medical scene</h4>
+                <div class="video-compare-container" id="medicalDiv">
+                    <video class="video" id="medical" loop playsinline autoPlay muted src="assets/demo_medical.mov" onplay="resizeAndPlay(this)"></video>
+                    <canvas height=0 class="videoMerge" id="medicalMerge"></canvas>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    Methodology
+                </h3>
+                <p>
+                    <image src="img/overview.png" class="img-responsive" alt="overview"></image> 
+                    <br>
+                    <b>CODD</b> builds on top of per-frame stereo depth estimation network with two additions:
+                    <ul>
+                        <li> 
+                            <span style="color: rgb(44, 93, 156);">Motion network</span> -- predicts per-pixel SE3 motion to align past estimates to the current frame,
+                        </li>
+                        <li> 
+                            <span style="color: rgb(44, 93, 156);">Fusion network</span> -- fuses the aligned estimates for temporal consistency.
+                        </li>
+                    </ul>
+                </p>
+
+                <h4>Motion network</h4>
+                <p>
+                    The <span style="color: rgb(44, 93, 156);">motion network</span> uses depth and features from previous time point and current time point to regress per-pixel SE3 motion. 
+                    The SE3 motion is regularized by a piece-wise consistent assumption to account for dynamics such as camera motion, object motion and object deformation.
+                    After recovering the SE3 motion, the <span style="color: rgb(44, 93, 156);">motion network</span> aligns the observations using differentiable rendering.
+                </p>
+                <center>
+                    <video width=80% class="large_video" controls autoplay muted loop>
+                        <source src="assets/method-motion.mp4" type="video/mp4">
+                        X
+                    </video>
+                </center>        
+
+                <h4>Fusion network</h4>
+                <p>
+                    The <span style="color: rgb(44, 93, 156);">fusion network</span> regresses per-pixel weightings between the aligned observations.
+                    A collection of explicit cues are extracted to guide the weighting regression, including self-similarity and cross-similarity (see paper for more details).
+                    The temporally consistent depth is generated by fusing the aligned estimates.
+                </p>
+                <center>
+                    <video width=80% class="large_video" controls autoplay muted loop>
+                        <source src="assets/method-fusion.mp4" type="video/mp4">
+                        X
+                    </video>
+                </center>        
+            </div>
+        </div>
+            
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    Citation
+                </h3>
+                <div class="col-md-12" style="font-size: small;">
+                    @article{li2021temporally,<br>
+                        &emsp;&emsp;&emsp;&emsp; title={Temporally Consistent Online Depth Estimation in Dynamic Scenes},<br>
+                        &emsp;&emsp;&emsp;&emsp; author={Li, Zhaoshuo and Ye, Wei and Wang, Dilin and Creighton, Francis X and Taylor, Russell H and Venkatesh, Ganeshnbsp and Unberath, Mathias},<br>
+                        &emsp;&emsp;&emsp;&emsp; journal={IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},<br>
+                        &emsp;&emsp;&emsp;&emsp; year={2023}<br>
+                        }
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    Poster
+                </h3>
+                <center>
+                    <iframe src="assets/280-wacv-post.pdf#toolbar=0" width="60%" height="950px"></iframe>
+                </center>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
                 <h3>
                     Acknowledgements
                 </h3>
                 <p class="text-justify">
-                We thank Johannes Kopf and Michael Zollhoefer for advice, and Vladimir Tankovich for HITNet implementation.
+                    We thank Johannes Kopf and Michael Zollhoefer for helpful discussions, and Vladimir Tankovich for HITNet implementation. We thank anonymous reviewers and meta-reviewers for their feedback on the paper. This work was done during an internship at Reality Labs, Meta Inc and funded in part by NIDCD K08 Grant DC019708.
                 </p>
             </div>
         </div>
