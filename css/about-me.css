@@ -1,36 +1,39 @@
 /* --- layout --- */
 .wrapper {
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
 	font-family: 'Roboto', sans-serif;
 }
 
 .main-wrapper {
-	padding: 60px;
-	padding-right: 350px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	padding-left: 20px;
+	padding-right: 250px;
 	font-size: 16px;
 	font-weight: 500;
 }
 
 .sidebar-wrapper {
 	position: absolute;
+	padding-right: 20px;
 	right: 0;
 	top: 0;
-	width: 280px;
+	width: 240px;
 	height: 100%;
 	min-height: 800px;
 }
 
 /* --- side bar ---*/
 
-.card-header{
+.card-header {
 	padding: 30px;
 	text-align: center;
 }
 
 
-.avatar{
+.avatar {
 	max-width: 100px;
 	margin-bottom: 15px;
 	border: 0px solid #fff;
@@ -52,11 +55,11 @@
 	margin-bottom: 0;
 }
 
-.card-header h3{
+.card-header h3 {
 	margin: 5px 0px;
 }
 
-.card-header h5{
+.card-header h5 {
 	font-weight: normal;
 }
 
@@ -64,18 +67,18 @@
 	padding: 0px;
 }
 
-.container-block ul{
+.container-block ul {
 	list-style-type: none;
 	font-size: 16px;
 	padding-left: 0px;
 }
 
 
-.contact-container i{
+.contact-container i {
 	padding-right: 7px;
 }
 
-.contact-container li{
+.contact-container li {
 	padding: 5px 0px;
 }
 
@@ -100,9 +103,6 @@
 
 .education-container .item {
 	margin-bottom: 15px;
-	&:last-child {
-		margin-bottom: 0;
-	}
 }
 
 .education-container .meta {
@@ -118,7 +118,7 @@
 	margin-bottom: 0px;
 }
 
-.education-container ul{
+.education-container ul {
 	margin-top: 15px;
 	margin-bottom: 0px;
 	font-size: 16px;
@@ -127,7 +127,7 @@
 	color: #868e96;
 }
 
-.education-container li{
+.education-container li {
 	padding: 3px 0px;
 }
 
@@ -158,16 +158,19 @@ p {
 	margin-bottom: 15px;
 	overflow: hidden;
 }
+
 .level-title {
 	font-size: 16px;
 	margin-top: 0;
 	margin-bottom: 12px;
 	font-weight: 600;
 }
+
 .level-bar {
 	height: 14px;
 	background: #f5f5f5;
 }
+
 .level-bar-inner {
 	height: 14px;
 	background: #7bc2d3;
@@ -201,7 +204,7 @@ p {
 /* Extra small devices (phones, less than 768px) */
 @media only screen and (max-width: 767px) {
 
-	body{
+	body {
 		padding: 0;
 	}
 
@@ -226,10 +229,12 @@ p {
 
 
 }
+
 /* Small devices (tablets, 768px and up) */
-@media only screen and  (min-width: 768px) {
-
-
+@media only screen and (min-width: 768px) {
+	.sidebar-wrapper {
+		position: fixed;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -250,18 +255,24 @@ p {
 		top: 1px;
 	}
 
-
+	.sidebar-wrapper {
+		position: fixed;
+	}
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
+	.sidebar-wrapper {
+		position: fixed;
+	}
 }
 
 
 /* Ex-Large devices (large desktops, 1200px and up) */
 @media only screen and (min-width: 1400px) {
-
+	.sidebar-wrapper {
+		position: fixed;
+	}
 }
 
 /* End of responsive review */
