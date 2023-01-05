@@ -1,0 +1,7 @@
+@inproceedings{li2023temporally,
+  title={Temporally consistent online depth estimation in dynamic scenes},
+  author={Li, Zhaoshuo and Ye, Wei and Wang, Dilin and Creighton, Francis X and Taylor, Russell H and Venkatesh, Ganesh and Unberath, Mathias},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  pages={3018--3027},
+  year={2023}
+}
