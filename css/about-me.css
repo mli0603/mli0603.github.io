@@ -214,6 +214,11 @@ p {
 	margin-bottom: 10px;
 }
 
+.date {
+	color: olive;
+	margin-right: 10px;
+}
+
 /* Extra small devices (phones, less than 768px) */
 @media only screen and (max-width: 767px) {
 
