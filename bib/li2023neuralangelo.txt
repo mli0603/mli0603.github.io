@@ -1,0 +1,7 @@
+@inproceedings{li2023neuralangelo,
+  title={Neuralangelo: High-Fidelity Neural Surface Reconstruction},
+  author={Li, Zhaoshuo and M{\"u}ller, Thomas and Evans, Alex and Taylor, Russell H and Unberath, Mathias and Liu, Ming-Yu and Lin, Chen-Hsuan},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={8456--8465},
+  year={2023}
+}
