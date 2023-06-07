@@ -1,6 +1,8 @@
-@article{li2022tatoo,
-  title={TAToo: Vision-based Joint Tracking of Anatomy and Tool for Skull-base Surgery},
+@article{li2023tatoo,
+  title={Tatoo: vision-based joint tracking of anatomy and tool for skull-base surgery},
   author={Li, Zhaoshuo and Shu, Hongchao and Liang, Ruixing and Goodridge, Anna and Sahu, Manish and Creighton, Francis X and Taylor, Russell H and Unberath, Mathias},
-  journal={arXiv preprint arXiv:2212.14131},
-  year={2022}
+  journal={International Journal of Computer Assisted Radiology and Surgery},
+  pages={1--8},
+  year={2023},
+  publisher={Springer}
 }
