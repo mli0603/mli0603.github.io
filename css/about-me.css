@@ -215,9 +215,20 @@ p {
 }
 
 .date {
-	color: olive;
+	color: rgb(6, 67, 117);
 	margin-right: 10px;
 }
+
+.award {
+	color: rgb(6, 120, 67);
+}
+
+a.paper:link,
+a.paper:visited {
+	color: rgb(6, 67, 117);
+}
+
+
 
 /* Extra small devices (phones, less than 768px) */
 @media only screen and (max-width: 767px) {
@@ -253,14 +264,14 @@ p {
 }
 
 /* Small devices (tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (min-height: 720px){
+@media only screen and (min-width: 768px) and (min-height: 720px) {
 	.sidebar-wrapper {
 		position: fixed;
 	}
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (min-height: 720px){
+@media only screen and (min-width: 992px) and (min-height: 720px) {
 
 	.skillset .level-title {
 		display: inline-block;
@@ -283,7 +294,7 @@ p {
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) and (min-height: 720px){
+@media only screen and (min-width: 1200px) and (min-height: 720px) {
 	.sidebar-wrapper {
 		position: fixed;
 	}
@@ -291,7 +302,7 @@ p {
 
 
 /* Ex-Large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 1400px) and (min-height: 720px){
+@media only screen and (min-width: 1400px) and (min-height: 720px) {
 	.sidebar-wrapper {
 		position: fixed;
 	}
