@@ -1,8 +1,0 @@
-@inproceedings{li2020anatomical,
-  title={Anatomical mesh-based virtual fixtures for surgical robots},
-  author={Li, Zhaoshuo and Gordon, Alex and Looi, Thomas and Drake, James and Forrest, Christopher and Taylor, Russell H},
-  booktitle={2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  pages={3267--3273},
-  year={2020},
-  organization={IEEE}
-}
