@@ -1,0 +1,7 @@
+@incollection{lin2024genusd,
+  title={GenUSD: 3D scene generation made easy},
+  author={Lin, Tsung-Yi and Lin, Chen-Hsuan and Cui, Yin and Ge, Yunhao and Nah, Seungjun and Mallya, Arun and Hao, Zekun and Ding, Yifan and Mao, Hanzi and Li, Zhaoshuo and others},
+  booktitle={ACM SIGGRAPH 2024 Real-Time Live!},
+  pages={1--2},
+  year={2024}
+}
