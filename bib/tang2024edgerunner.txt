@@ -1,0 +1,6 @@
+@article{tang2024edgerunner,
+  title={Edgerunner: Auto-regressive auto-encoder for artistic mesh generation},
+  author={Tang, Jiaxiang and Li, Zhaoshuo and Hao, Zekun and Liu, Xian and Zeng, Gang and Liu, Ming-Yu and Zhang, Qinsheng},
+  journal={arXiv preprint arXiv:2409.18114},
+  year={2024}
+}
