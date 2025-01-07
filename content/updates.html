@@ -7,86 +7,36 @@
         </span>
         Updates
     </h2>
-    <table style="width: auto;">
-        <tr>
-            <td style="width:20%">
-                <div class="date">11.11.2024</div>
-            </td>
-            <td>
-                <a class="paper" href="https://arxiv.org/abs/2411.07135">Edify 3D</a> white paper is released!
-            </td>
-        </tr>
-        <tr>
-            <td style="width:20%">
-                <div class="date">10.09.2024</div>
-            </td>
-            <td>
-                <a class="paper" href="https://www.shutterstock.com/discover/generative-ai-3d">Shutterstock's Generative AI</a> for 3D assets powered by my research work is now available!
-            </td>
-        </tr>
-        <tr>
-            <td style="width:20%">
-                <div class="date">09.27.2024</div>
-            </td>
-            <td>
-                We just released <a class="paper" href="https://research.nvidia.com/labs/dir/edgerunner/">EdgeRunner</a>, an auto-regressive generative model for artistic mesh creation!
-            </td>
-        </tr>
-        <tr>
-            <td style="width:20%">
-                <div class="date">08.16.2024</div>
-            </td>
-            <td>
-                Our <a class="paper" href="https://research.nvidia.com/labs/toronto-ai/space-mesh/">SpaceMesh</a>, a continuous respresnetation for manifold meshes, is accepted by SIGGRAPH ASIA!
-            </td>
-        </tr>
-        <tr>
-            <td style="width:20%">
-                <div class="date">07.30.2024</div>
-            </td>
-            <td>
-                GenUSD was featured in <a class="paper"
-                    href="https://blogs.nvidia.com/blog/real-time-3d-generative-ai-research-siggraph-2024/?ncid=so-twit-353134-vt36&linkId=100000277255797">
-                    Real Time Live! at SIGGRAPH 2024!</a>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:20%">
-                <div class="date">10.24.2023</div>
-            </td>
-            <td>
-                Neuralangelo has been named as the <a class="paper"
-                    href="https://time.com/collection/best-inventions-2023/6324133/neuralangelo/">TIME's
-                    Best
-                    Inventions of 2023!</a>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:20%">
-                <div class="date">06.21.2023</div>
-            </td>
-            <td>
-                Our paper <a class="paper" href="https://arxiv.org/abs/2211.11863">Twin-S</a> won
-                <span class="award">Best Paper Award Honorable Mention</span> at IPCAI 2023!
-            </td>
-        </tr>
-        <tr>
-            <td style="width:20%">
-                <div class="date">03.24.2023</div>
-            </td>
-            <td>
-                I have defended my thesis! <a class="paper" href="https://youtu.be/WKadRuRPg_0">Full
-                    talk can be found here.</a>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:20%">
-                <div class="date">07.30.2021</div>
-            </td>
-            <td>
-                <a class="paper" href="https://github.com/mli0603/stereo-transformer">STTR</a> accepted at
-                ICCV 2021 as an <span class="award">Oral Paper</span>!
-            </td>
-        </tr>
-    </table>
+    <script>
+        const updates = [
+            { date: '01.06.2025', message: 'We released <a class="paper" href="https://www.nvidia.com/en-us/ai/cosmos/">Cosmos</a>, a world foundation model platform for physical AI!' },    
+            { date: '11.11.2024', message: 'We released <a class="paper" href="https://arxiv.org/abs/2411.07135">Edify 3D</a>, technology for 3D generation!' },
+            { date: '10.09.2024', message: '<a class="paper" href="https://www.shutterstock.com/discover/generative-ai-3d">Shutterstock\'s Generative AI</a> for 3D assets powered by my research work is now available!' },
+            { date: '09.27.2024', message: 'We just released <a class="paper" href="https://research.nvidia.com/labs/dir/edgerunner/">EdgeRunner</a>, an auto-regressive generative model for artistic mesh creation!' },
+            { date: '08.16.2024', message: 'Our <a class="paper" href="https://research.nvidia.com/labs/toronto-ai/space-mesh/">SpaceMesh</a>, a continuous respresnetation for manifold meshes, is accepted by SIGGRAPH ASIA!' },
+            { date: '07.30.2024', message: 'GenUSD was featured in <a class="paper" href="https://blogs.nvidia.com/blog/real-time-3d-generative-ai-research-siggraph-2024/?ncid=so-twit-353134-vt36&linkId=100000277255797"> Real Time Live! at SIGGRAPH 2024!</a>' },
+            { date: '10.24.2023', message: 'Neuralangelo has been named as the <a class="paper" href="https://time.com/collection/best-inventions-2023/6324133/neuralangelo/">TIME\'s Best Inventions of 2023!</a>' },
+            // { date: '06.21.2023', message: 'Our paper <a class="paper" href="https://arxiv.org/abs/2211.11863">Twin-S</a> won <span class="award">Best Paper Award Honorable Mention</span> at IPCAI 2023!' },
+            // { date: '03.24.2023', message: 'I have defended my thesis! <a class="paper" href="https://youtu.be/WKadRuRPg_0">Full talk can be found here.</a>' },
+            { date: '07.30.2021', message: '<a class="paper" href="https://github.com/mli0603/stereo-transformer">STTR</a> accepted at ICCV 2021 as an <span class="award">Oral Paper</span>!' }
+        ];
+        function generateTable(updates) {
+            let tableContent = '<table style="width: auto;">';
+            updates.forEach(update => {
+            tableContent += `
+                <tr>
+                <td style="width:20%">
+                    <div class="date">${update.date}</div>
+                </td>
+                <td>
+                    ${update.message}
+                </td>
+                </tr>
+            `;
+            });
+            tableContent += '</table>';
+            return tableContent;
+        }
+        document.querySelector('.section-updates').insertAdjacentHTML('beforeend', generateTable(updates));
+    </script>
 </section>
