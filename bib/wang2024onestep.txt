@@ -1,0 +1,9 @@
+@misc{wang2024onestepdiffusionpolicyfast,
+      title={One-Step Diffusion Policy: Fast Visuomotor Policies via Diffusion Distillation}, 
+      author={Zhendong Wang and Zhaoshuo Li and Ajay Mandlekar and Zhenjia Xu and Jiaojiao Fan and Yashraj Narang and Linxi Fan and Yuke Zhu and Yogesh Balaji and Mingyuan Zhou and Ming-Yu Liu and Yu Zeng},
+      year={2024},
+      eprint={2410.21257},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2410.21257}, 
+}
