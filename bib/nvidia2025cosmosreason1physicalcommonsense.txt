@@ -1,0 +1,9 @@
+@misc{nvidia2025cosmosreason1physicalcommonsense,
+      title={Cosmos-Reason1: From Physical Common Sense To Embodied Reasoning}, 
+      author={NVIDIA and : and Alisson Azzolini and Hannah Brandon and Prithvijit Chattopadhyay and Huayu Chen and Jinju Chu and Yin Cui and Jenna Diamond and Yifan Ding and Francesco Ferroni and Rama Govindaraju and Jinwei Gu and Siddharth Gururani and Imad El Hanafi and Zekun Hao and Jacob Huffman and Jingyi Jin and Brendan Johnson and Rizwan Khan and George Kurian and Elena Lantz and Nayeon Lee and Zhaoshuo Li and Xuan Li and Tsung-Yi Lin and Yen-Chen Lin and Ming-Yu Liu and Andrew Mathau and Yun Ni and Lindsey Pavao and Wei Ping and David W. Romero and Misha Smelyanskiy and Shuran Song and Lyne Tchapmi and Andrew Z. Wang and Boxin Wang and Haoxiang Wang and Fangyin Wei and Jiashu Xu and Yao Xu and Xiaodong Yang and Zhuolin Yang and Xiaohui Zeng and Zhe Zhang},
+      year={2025},
+      eprint={2503.15558},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2503.15558}, 
+}
