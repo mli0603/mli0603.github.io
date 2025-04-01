@@ -1,0 +1,9 @@
+@misc{zhao2025cotvlavisualchainofthoughtreasoning,
+      title={CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models}, 
+      author={Qingqing Zhao and Yao Lu and Moo Jin Kim and Zipeng Fu and Zhuoyang Zhang and Yecheng Wu and Zhaoshuo Li and Qianli Ma and Song Han and Chelsea Finn and Ankur Handa and Ming-Yu Liu and Donglai Xiang and Gordon Wetzstein and Tsung-Yi Lin},
+      year={2025},
+      eprint={2503.22020},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2503.22020}, 
+}
