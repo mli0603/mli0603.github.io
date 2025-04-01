@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         <a href="${publication.pdfLink}"><i class="fa-regular fa-file-pdf fa-1x"></i><small>&nbsp; Paper</small></a>
-                        <a href="${publication.bibtexLink}" style="padding-left: 1em;"><i class="fa-regular fa-note-sticky fa-1x"></i><small>&nbsp; Bibtex</small></a>
+                        <a href="#" onclick="showBibtex('${publication.bibtexLink}'); return false;" style="padding-left: 1em;"><i class="fa-regular fa-note-sticky fa-1x"></i><small>&nbsp; Bibtex</small></a>
                         <a href="${publication.projectPageLink}" style="padding-left: 1em;"><i class="fa fa-external-link fa-1x"></i><small>&nbsp; Project Page</small></a>
                         ${publication.productPageLink ? `<a href="${publication.productPageLink}" style="padding-left: 1em;"><i class="fa fa-codepen fa-1x"></i><small>&nbsp; Product Page</small></a>` : ''}
                     </div>
@@ -135,6 +135,13 @@
             `;
         }
 
-        document.querySelector('.section-publication').insertAdjacentHTML('beforeend', publications.map(generatePublicationBlock).join(''));
+        // Render publications
+        document.querySelector('.section-publication').insertAdjacentHTML(
+            'beforeend', 
+            publications.map(generatePublicationBlock).join('')
+        );
     </script>
+    
+    <!-- Include the BibTeX functionality -->
+    <script src="js/bibtex-popup.js"></script>
 </section>
