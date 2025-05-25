@@ -92,6 +92,15 @@
                 projectPageLink: "https://research.nvidia.com/labs/dir/neuralangelo/"
             },
             {
+                videoSrc: "media/projects/codd.gif",
+                paperTitle: "Temporally Consistent Online Depth Estimation in Dynamic Scenes",
+                contributors: "<b>Zhaoshuo Li</b>, Wei Ye, Dilin Wang, Francis X Creighton, Russell H Taylor, Ganesh Venkatesh, Mathias Unberath",
+                conference: "WACV 2023",
+                pdfLink: "https://arxiv.org/abs/2111.09337",
+                bibtexLink: "bib/li2023temporally.bib",
+                projectPageLink: "https://mli0603.github.io/codd/"
+            },
+            {
                 videoSrc: "media/projects/sttr.gif",
                 paperTitle: "Revisiting stereo depth estimation from a sequence-to-sequence perspective with transformers",
                 contributors: "<b>Zhaoshuo Li</b>, Xingtong Liu, Nathan Drenkow, Andy Ding, Francis X Creighton, Russell H Taylor, Mathias Unberath",
@@ -107,8 +116,8 @@
                 <div class="row align-items-center">
                     <div class="col-md-5 text-center">
                         ${publication.videoSrc.endsWith('.mp4') || publication.videoSrc.endsWith('.webm') ? `
-                        <video width="100%" autoplay muted loop oncontextmenu="return false;">
-                            <source src="${publication.videoSrc}" type="video/mp4">
+                        <video width="100%" autoplay muted loop playsinline oncontextmenu="return false;">
+                            <source src="${publication.videoSrc}" type="${publication.videoSrc.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
                             Your browser does not support the video tag.
                         </video>
                         ` : `
