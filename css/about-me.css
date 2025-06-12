@@ -159,6 +159,29 @@
 	color: #0085A1;
 }
 
+.fun-fact {
+	margin-top: 25px;
+	padding: 15px 20px;
+	background-color: #f8f9fa;
+	border-left: 4px solid #0085A1;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #6c757d;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.fun-fact i {
+	color: #0085A1;
+	font-size: 16px;
+}
+
+.fun-fact em {
+	font-style: italic;
+	font-weight: 500;
+}
+
 section {
 	margin-bottom: 60px;
 }
