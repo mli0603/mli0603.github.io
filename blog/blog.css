@@ -1,0 +1,373 @@
+/* Blog-specific styles following magazine format */
+
+/* Magazine-style layout */
+.magazine-header {
+    text-align: center;
+    padding: 80px 0 20px;
+    background: white;
+    color: #0085A1;
+    margin-top: -20px;
+}
+
+/* Using existing section-title class from about-me.css */
+
+.magazine-subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.magazine-author {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.subscriber-count {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Container and layout */
+.magazine-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.back-navigation {
+    margin: 30px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Post grid layout */
+.posts-grid {
+    margin-top: 40px;
+}
+
+.post-card {
+    border-bottom: 1px solid #dee2e6;
+    padding: 40px 0;
+    transition: all 0.2s ease;
+}
+
+.post-card:hover {
+    background-color: #f8f9fa;
+    margin: 0 -20px;
+    padding: 40px 20px;
+    border-radius: 8px;
+}
+
+.post-card:last-child {
+    border-bottom: none;
+}
+
+.post-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.post-card a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: rgb(6, 67, 117);
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.3;
+}
+
+.post-excerpt {
+    font-size: 1.1rem;
+    color: #212529;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #212529;
+    font-weight: 500;
+}
+
+.post-date {
+    color: #212529;
+    font-weight: 600;
+}
+
+/* Individual blog post styles */
+.blog-post-header {
+    text-align: center;
+    padding: 60px 0 40px;
+    background: linear-gradient(135deg, #0085A1, #00657b);
+    color: white;
+    margin-top: -20px;
+}
+
+.blog-post-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog-post-meta {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+.blog-post-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.blog-post-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #212529;
+    font-family: 'Lora', 'Times New Roman', serif;
+    margin-top: 40px;
+}
+
+.blog-post-body h1,
+.blog-post-body h2,
+.blog-post-body h3,
+.blog-post-body h4,
+.blog-post-body h5,
+.blog-post-body h6 {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: #212529;
+}
+
+.blog-post-body h1 { font-size: 2.2rem; }
+.blog-post-body h2 { font-size: 1.8rem; }
+.blog-post-body h3 { font-size: 1.5rem; }
+
+.blog-post-body p {
+    margin: 25px 0;
+}
+
+.blog-post-body blockquote {
+    border-left: 4px solid #0085A1;
+    padding-left: 25px;
+    margin: 35px 0;
+    font-style: italic;
+    color: #6c757d;
+    font-size: 1.15rem;
+}
+
+.blog-post-body code {
+    background: #f8f9fa;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #e83e8c;
+}
+
+.blog-post-body pre {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 35px 0;
+    border: 1px solid #dee2e6;
+}
+
+.blog-post-body pre code {
+    background: none;
+    padding: 0;
+    color: #212529;
+}
+
+.blog-post-body img {
+    max-width: 100%;
+    height: auto;
+    margin: 35px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-body ul, 
+.blog-post-body ol {
+    margin: 25px 0;
+    padding-left: 30px;
+}
+
+.blog-post-body li {
+    margin: 8px 0;
+}
+
+/* Navigation styles */
+.post-navigation {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+
+.nav-button {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+/* Loading and error states */
+.loading-state {
+    text-align: center;
+    padding: 100px 0;
+    color: #6c757d;
+}
+
+.error-state {
+    text-align: center;
+    padding: 100px 0;
+    color: #dc3545;
+}
+
+.loading-spinner {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    color: #6c757d;
+}
+
+.empty-state-icon {
+    font-size: 4rem;
+    color: #dee2e6;
+    margin-bottom: 30px;
+}
+
+.empty-state h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #495057;
+}
+
+/* Fix profile image path for blog pages */
+.avatar[src="media/profile.jpg"] {
+    content: url("../media/profile.jpg");
+}
+
+/* Footer centering for blog pages */
+#footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#footer .col-lg-8 {
+    max-width: 100%;
+    flex: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .magazine-title {
+        font-size: 2.5rem;
+    }
+    
+    .magazine-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .blog-post-title {
+        font-size: 2rem;
+    }
+    
+    .post-title {
+        font-size: 1.5rem;
+    }
+    
+    .magazine-container,
+    .blog-post-content {
+        padding: 0 15px;
+    }
+    
+    .post-card:hover {
+        margin: 0 -15px;
+        padding: 40px 15px;
+    }
+}
+
+/* Magazine-style typography */
+.magazine-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #6c757d;
+    text-align: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #0085A1;
+}
+
+.magazine-quote .author {
+    font-weight: 600;
+    color: #495057;
+    margin-top: 15px;
+    font-style: normal;
+}
+
+/* Button styling to match theme */
+.btn-magazine {
+    background-color: #0085A1;
+    border-color: #0085A1;
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.btn-magazine:hover {
+    background-color: #00657b;
+    border-color: #00657b;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.btn-outline-magazine {
+    background-color: transparent;
+    border: 2px solid #0085A1;
+    color: #0085A1;
+    font-weight: 600;
+    padding: 10px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-magazine:hover {
+    background-color: #0085A1;
+    color: white;
+    text-decoration: none;
+    transform: translateY(-1px);
+}

@@ -77,10 +77,17 @@
 
 .contact-container i {
 	padding-right: 7px;
+	vertical-align: middle;
 }
 
 .contact-container li {
 	padding: 5px 0px;
+	display: flex;
+	align-items: center;
+}
+
+.contact-container a {
+	text-align: left;
 }
 
 .container-block {

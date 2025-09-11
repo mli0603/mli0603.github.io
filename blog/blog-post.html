@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Max Zhaoshuo Li's Blog Post.">
+
+	<title id="page-title">Blog Post - Max Li 李赵硕</title>
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+
+	<!-- Bootstrap core CSS -->
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+	<!-- JQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<!-- Markdown parser -->
+	<script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+
+	<!-- Custom fonts for this template -->
+	<script src="https://kit.fontawesome.com/d1a49f0666.js" crossorigin="anonymous"></script>
+	<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet'
+		type='text/css'>
+	<link
+		href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+		rel='stylesheet' type='text/css'>
+
+	<!-- Custom styles for this template -->
+	<link href="../css/clean-blog.css" rel="stylesheet">
+	<link href="../css/about-me.css" rel="stylesheet">
+	<link href="blog.css" rel="stylesheet">
+</head>
+
+<body>
+	<!-- Blog Post Header -->
+	<header class="blog-post-header">
+		<div class="blog-post-content">
+			<h1 id="blog-title" class="blog-post-title">Loading...</h1>
+			<div id="blog-meta" class="blog-post-meta"></div>
+		</div>
+	</header>
+
+	<!-- Main Content -->
+	<main class="blog-post-content">
+		<!-- Back Navigation -->
+		<nav class="back-navigation">
+			<a href="blog-listing.html" class="btn-outline-magazine">
+				<i class="fas fa-arrow-left"></i> Back to Blog
+			</a>
+			<a href="../index.html" class="btn-outline-magazine" style="margin-left: 10px;">
+				<i class="fas fa-home"></i> Home
+			</a>
+		</nav>
+
+		<!-- Loading State -->
+		<div id="loading" class="loading-state">
+			<div class="loading-spinner">
+				<i class="fas fa-spinner fa-spin"></i>
+			</div>
+			<p>Loading blog post...</p>
+		</div>
+
+		<!-- Error State -->
+		<div id="error" class="error-state" style="display: none;">
+			<div class="empty-state-icon">
+				<i class="fas fa-exclamation-triangle"></i>
+			</div>
+			<h3>Blog post not found</h3>
+			<p>The requested blog post could not be loaded.</p>
+		</div>
+
+		<!-- Blog Content -->
+		<article id="blog-content" style="display: none;">
+			<div id="blog-body" class="blog-post-body">
+				<!-- Blog content will be loaded here -->
+			</div>
+		</article>
+
+		<!-- Navigation -->
+		<nav class="post-navigation">
+			<div class="nav-button">
+				<a href="blog-listing.html" class="btn-magazine">
+					<i class="fas fa-list"></i> View All Posts
+				</a>
+			</div>
+		</nav>
+	</main>
+
+	<!-- Footer -->
+	<div id="footer"></div>
+
+	<!-- Blog JavaScript -->
+	<script src="blog.js"></script>
+	<script>
+		$(document).ready(function() {
+			// Load footer
+			$("#footer").load("../content/footer.html");
+			
+			BlogManager.initializeBlogPost();
+		});
+	</script>
+</body>
+
+</html>
