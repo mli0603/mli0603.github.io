@@ -90,13 +90,32 @@
 			$("#profile-bar").load("../content/profile-bar.html");
 			$("#footer").load("../content/footer.html");
 			
-			// List of blog post filenames - add new posts here
-			const blogFiles = [
-				'qwen3-vl.md',
-				// Add more blog post filenames here as you create them
+			// Static blog posts data - add new posts here
+			const staticPosts = [
+				{
+					title: "Qwen3-VL: changes from Qwen2.5-VL",
+					excerpt: "An early peek of what has changed",
+					date: "2025-09-10",
+					filename: "qwen3-vl.html"
+				},
+				// Add more blog posts here as you create them
 			];
 			
-			BlogManager.initializeBlogListing(blogFiles);
+			// Ensure the function is available and call it
+			if (typeof window.displayStaticBlogPosts === 'function') {
+				window.displayStaticBlogPosts(staticPosts);
+			} else {
+				// Fallback: wait for blog.js to load
+				setTimeout(() => {
+					if (typeof window.displayStaticBlogPosts === 'function') {
+						window.displayStaticBlogPosts(staticPosts);
+					} else {
+						console.error('displayStaticBlogPosts function not found');
+						$('#loading').hide();
+						$('#empty-state').show();
+					}
+				}, 100);
+			}
 		});
 	</script>
 </body>

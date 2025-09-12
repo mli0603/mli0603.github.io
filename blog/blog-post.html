@@ -41,7 +41,7 @@
 		<!-- Blog Post Header -->
 	<header class="blog-post-header">
 		<div class="blog-post-content">
-			<h1 id="blog-title" class="blog-post-title">Loading...</h1>
+			<h1 id="blog-title" class="blog-post-title"></h1>
 			<div id="blog-meta" class="blog-post-meta"></div>
 		</div>
 	</header>
@@ -86,7 +86,80 @@
 			// Load footer
 			$("#footer").load("../content/footer.html");
 			
-			BlogManager.initializeBlogPost();
+			// Blog post metadata - keep this in sync with blog-listing.html
+			const blogPostMetadata = {
+				'qwen3-vl.html': {
+					title: "Qwen3-VL: changes from Qwen2.5-VL",
+					excerpt: "An early peek of what has changed",
+					date: "2025-09-10"
+				},
+				// Add more blog post metadata here as you create them
+			};
+			
+			// Get the post filename from URL parameter
+			const urlParams = new URLSearchParams(window.location.search);
+			const postFilename = urlParams.get('post');
+			
+			console.log('Blog post page loaded, post filename:', postFilename);
+			console.log('Available metadata keys:', Object.keys(blogPostMetadata));
+			console.log('Looking for metadata for:', postFilename);
+			console.log('Metadata found:', blogPostMetadata[postFilename]);
+			
+			if (postFilename && blogPostMetadata[postFilename]) {
+				const metadata = blogPostMetadata[postFilename];
+				
+				// Format date simply
+				const formatDate = (dateString) => {
+					try {
+						const date = new Date(dateString);
+						return date.toLocaleDateString('en-US', {
+							year: 'numeric',
+							month: 'long',
+							day: 'numeric'
+						});
+					} catch (e) {
+						return dateString;
+					}
+				};
+				
+				// Update page title and header
+				document.title = `${metadata.title} - Max Li 李赵硕`;
+				$('#blog-title').text(metadata.title);
+				$('#blog-meta').text(formatDate(metadata.date));
+				
+				console.log('Updated blog post header:', metadata.title, formatDate(metadata.date));
+				
+				// Load the HTML content
+				fetch(postFilename)
+					.then(response => {
+						if (!response.ok) {
+							throw new Error(`HTTP error! status: ${response.status}`);
+						}
+						return response.text();
+					})
+					.then(html => {
+						// Extract the content from the HTML (remove the Jekyll layout wrapper if any)
+						const parser = new DOMParser();
+						const doc = parser.parseFromString(html, 'text/html');
+						const content = doc.body.innerHTML || html;
+						
+						$('#blog-body').html(content);
+						$('#loading').hide();
+						$('#blog-content').show();
+					})
+					.catch(error => {
+						console.error(`Failed to load blog post ${postFilename}:`, error);
+						$('#loading').hide();
+						$('#error').show();
+					});
+			} else {
+				console.error('Blog post not found or no metadata available. Post filename:', postFilename);
+				document.title = 'Blog Post Not Found - Max Li 李赵硕';
+				$('#blog-title').text('Blog Post Not Found');
+				$('#blog-meta').text('');
+				$('#loading').hide();
+				$('#error').show();
+			}
 		});
 	</script>
 </body>

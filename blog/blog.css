@@ -49,11 +49,15 @@
 /* Post grid layout */
 .posts-grid {
     margin-top: 40px;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .post-card {
     border-bottom: 1px solid #dee2e6;
     padding: 40px 0;
+    margin-left: 0;
+    padding-left: 0;
     transition: all 0.2s ease;
 }
 
@@ -83,9 +87,12 @@
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: 15px;
-    color: rgb(6, 67, 117);
+    margin-left: 0;
+    padding-left: 0;
+    color: #0085A1;
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.3;
+    text-align: left;
 }
 
 .post-excerpt {

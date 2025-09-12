@@ -257,6 +257,61 @@ function initializeBlogListing(blogFiles) {
 }
 
 /**
+ * Initialize blog listing from markdown files with frontmatter parsing
+ * @param {Array} markdownFiles - Array of markdown filenames to load and parse
+ */
+function initializeBlogListingFromMarkdown(markdownFiles) {
+    showLoadingState();
+    
+    const promises = markdownFiles.map(filename => {
+        return fetch(filename)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(content => {
+                const parsed = parseFrontmatter(content);
+                return {
+                    filename: filename.replace('.md', '.html'), // Link to HTML version
+                    title: parsed.metadata.title || filename.replace('.md', '').replace(/-/g, ' '),
+                    excerpt: parsed.metadata.excerpt || generateExcerpt(parsed.content),
+                    date: parsed.metadata.date || 'No date',
+                    content: parsed.content,
+                    metadata: parsed.metadata
+                };
+            })
+            .catch(error => {
+                console.error(`Failed to load ${filename}:`, error);
+                return null; // Return null for failed loads
+            });
+    });
+
+    Promise.all(promises).then(posts => {
+        hideLoadingState();
+        const validPosts = posts.filter(post => post !== null);
+        
+        if (validPosts.length > 0) {
+            // Sort by date (newest first)
+            validPosts.sort((a, b) => {
+                if (a.date === 'No date' && b.date === 'No date') return 0;
+                if (a.date === 'No date') return 1;
+                if (b.date === 'No date') return -1;
+                return new Date(b.date) - new Date(a.date);
+            });
+            displayBlogPosts(validPosts);
+        } else {
+            showEmptyState();
+        }
+    }).catch((error) => {
+        console.error('Error loading blog posts:', error);
+        hideLoadingState();
+        showErrorState();
+    });
+}
+
+/**
  * Initialize blog post page
  */
 function initializeBlogPost() {
@@ -289,7 +344,7 @@ function displayStaticBlogPosts(posts) {
     posts.forEach(function(post) {
         const postCard = $(`
             <article class="post-card">
-                <a href="${post.filename}">
+                <a href="blog-post.html?post=${encodeURIComponent(post.filename)}">
                     <h2 class="post-title">${post.title}</h2>
                     <p class="post-excerpt">${post.excerpt}</p>
                     <div class="post-meta">
@@ -310,6 +365,7 @@ function displayStaticBlogPosts(posts) {
 // Export functions for global use
 window.BlogManager = {
     initializeBlogListing,
+    initializeBlogListingFromMarkdown,
     initializeBlogPost,
     loadBlogPosts,
     loadBlogPost,

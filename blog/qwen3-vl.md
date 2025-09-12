@@ -1,7 +1,5 @@
 ---
-title: "Qwen3-VL: changes from Qwen2.5-VL"
-excerpt: "An early peek of what has changed"
-date: "2025-09-10"
+layout: none
 ---
 
 The Qwen-VL series has consistently been the most performant VLM in the open-source community. After a year of waiting, the [PR](https://github.com/huggingface/transformers/pull/40795) for Qwen3-VL has finally arrived 🎉 

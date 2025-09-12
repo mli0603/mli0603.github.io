@@ -1,0 +1,43 @@
+# Jekyll Configuration for GitHub Pages
+title: "Max Li 李赵硕"
+description: "Max's Research Blog"
+baseurl: ""
+url: "https://mli0603.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Max Li"
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+
+# Include vendor directory for assets
+include:
+  - vendor
+  - "blog/*.md"
