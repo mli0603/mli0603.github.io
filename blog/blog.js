@@ -91,7 +91,13 @@ function loadBlogPosts(blogFiles) {
     showLoadingState();
     
     const promises = blogFiles.map(filename => {
-        return $.get(`${filename}`)
+        return fetch(filename)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.text();
+            })
             .then(content => {
                 const parsed = parseFrontmatter(content);
                 return {
@@ -103,10 +109,13 @@ function loadBlogPosts(blogFiles) {
                     metadata: parsed.metadata
                 };
             })
-            .catch(() => null); // Return null for failed loads
+            .catch(error => {
+                console.error(`Failed to load ${filename}:`, error);
+                return null; // Return null for failed loads
+            });
     });
 
-        Promise.all(promises).then(posts => {
+    Promise.all(promises).then(posts => {
         hideLoadingState();
         const validPosts = posts.filter(post => post !== null);
         
@@ -123,6 +132,7 @@ function loadBlogPosts(blogFiles) {
             showEmptyState();
         }
     }).catch((error) => {
+        console.error('Error loading blog posts:', error);
         hideLoadingState();
         showErrorState();
     });
@@ -161,8 +171,14 @@ function loadBlogPost(filename) {
     showLoadingState();
     
     // Load the markdown file directly and parse frontmatter
-    $.get(`${filename}`)
-        .done(function(markdown) {
+    fetch(filename)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(markdown => {
             const parsed = parseFrontmatter(markdown);
             const post = {
                 title: parsed.metadata.title || filename.replace('.md', '').replace(/-/g, ' '),
@@ -173,7 +189,8 @@ function loadBlogPost(filename) {
             };
             displayBlogPost(post, parsed.content);
         })
-        .fail(function() {
+        .catch(error => {
+            console.error(`Failed to load blog post ${filename}:`, error);
             hideLoadingState();
             showErrorState();
         });
@@ -253,6 +270,43 @@ function initializeBlogPost() {
     }
 }
 
+/**
+ * Display static blog posts (for GitHub Pages compatibility)
+ * @param {Array} posts - Array of static post objects
+ */
+function displayStaticBlogPosts(posts) {
+    const postsContainer = $('#blog-posts');
+    postsContainer.empty();
+    
+    // Sort by date (newest first)
+    posts.sort((a, b) => {
+        if (a.date === 'No date' && b.date === 'No date') return 0;
+        if (a.date === 'No date') return 1;
+        if (b.date === 'No date') return -1;
+        return new Date(b.date) - new Date(a.date);
+    });
+    
+    posts.forEach(function(post) {
+        const postCard = $(`
+            <article class="post-card">
+                <a href="${post.filename}">
+                    <h2 class="post-title">${post.title}</h2>
+                    <p class="post-excerpt">${post.excerpt}</p>
+                    <div class="post-meta">
+                        <span class="post-date">${formatDate(post.date)}</span>
+                    </div>
+                </a>
+            </article>
+        `);
+        
+        postsContainer.append(postCard);
+    });
+    
+    // Show the posts container
+    $('#loading').hide();
+    $('#blog-posts').show();
+}
+
 // Export functions for global use
 window.BlogManager = {
     initializeBlogListing,
@@ -263,3 +317,6 @@ window.BlogManager = {
     formatDate,
     generateExcerpt
 };
+
+// Export static function globally
+window.displayStaticBlogPosts = displayStaticBlogPosts;
