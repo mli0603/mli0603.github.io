@@ -111,7 +111,7 @@ If the input is `A cat <frame1> <frame2> <frame3>` where each frame has one visi
   <tr>
     <td style="vertical-align: top; width: 50%;">
       <a href="https://github.com/huggingface/transformers/blob/088e9c30712151060aacecd3454150f4edd83cd1/src/transformers/models/qwen2_5_vl/modeling_qwen2_5_vl.py#L957-L1140">
-        <img src="media/qwen3-vl/20250911191857.png" alt="Video Position Embedding Example 1" style="max-width:100%;">
+        <img src="media/qwen3-vl/20250912133859.png" alt="Video Position Embedding Example 1" style="max-width:100%;">
       </a>
     </td>
     <td style="vertical-align: top; width: 50%;">
@@ -124,6 +124,10 @@ If the input is `A cat <frame1> <frame2> <frame3>` where each frame has one visi
 Such a design will improve the temporal localization capability of VLM.
 
 <!-- ```
-   A      cat     <t1> <frame1>  <t2> <frame2>   <t3> <frame3>
-[0,0,0] [1,1,1] [2,2,2][3,0,0]  [4,4,4][5,0,0] [6,6,6][7,0,0]
+   A      cat       <frame1>       <frame2>      <frame3>
+[0,0,0] [1,1,1]  [2+1/FPS,0,0]  [2+2/FPS,0,0]  [2+3/FPS,0,0]
+``` -->
+<!-- ```
+   A      cat    <t1> <frame1>   <t2> <frame2>   <t3> <frame3>
+[0,0,0] [1,1,1] [2,2,2][3,0,0]  [4,4,4][5,0,0]  [6,6,6][7,0,0]
 ``` -->
