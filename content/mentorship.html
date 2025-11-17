@@ -1,0 +1,90 @@
+<!-- mentorship -->
+<section class="section-mentorship">
+    <h2 class="section-title">
+        <span class="fa-stack fa-xs">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-users fa-stack-1x fa-inverse"></i>
+        </span>
+        Mentorship
+    </h2>
+    
+    <script>
+        const mentees = [
+            {
+                name: "Lu Ling",
+                currentPosition: "World Labs",
+                website: "https://luling06.github.io/"
+            },
+            {
+                name: "Zhendong Wang",
+                currentPosition: "Microsoft GenAI Team",
+                website: "https://zhendong-wang.github.io/"
+            },
+            {
+                name: "Xiaorui Zhang",
+                currentPosition: "Intuitive Surgical",
+            },
+            {
+                name: "Wenkai Luo",
+                currentPosition: "Cornerstone Robotics",
+            }
+            // Add more mentees here as needed
+        ];
+
+        function generateMenteeList(mentees) {
+            let listContent = '<ul class="mentee-list">';
+            mentees.forEach(mentee => {
+                listContent += `
+                    <li class="mentee-item">
+                        ${mentee.website ? `<a href="${mentee.website}" target="_blank" class="mentee-name">${mentee.name}</a>` : `<span class="mentee-name">${mentee.name}</span>`}
+                        <span class="mentee-position"> - ${mentee.currentPosition}</span>
+                    </li>
+                `;
+            });
+            listContent += '</ul>';
+            return listContent;
+        }
+
+        // Render mentees
+        document.querySelector('.section-mentorship').insertAdjacentHTML(
+            'beforeend', 
+            generateMenteeList(mentees)
+        );
+    </script>
+
+    <style>
+        .section-mentorship {
+            margin-bottom: 2rem;
+        }
+        
+        .mentee-list {
+            list-style: none;
+            padding-left: 2rem;
+            line-height: 1.8;
+        }
+        
+        .mentee-item {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .mentee-name {
+            font-weight: 600;
+            color: rgb(6, 67, 117);
+        }
+        
+        .mentee-name a {
+            color: rgb(6, 67, 117);
+            text-decoration: none;
+        }
+        
+        .mentee-name a:hover {
+            text-decoration: underline;
+        }
+        
+        .mentee-position {
+            color: #333;
+            font-weight: normal;
+        }
+    </style>
+</section>
