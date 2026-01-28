@@ -1,3 +1,19 @@
+/* --- global link styles --- */
+a {
+	color: #0085A1;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+a:hover {
+	color: #006d85;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #0085A1;
+}
+
 /* --- layout --- */
 .wrapper {
 	max-width: 1200px;
@@ -283,7 +299,7 @@ p {
 
 a.paper:link,
 a.paper:visited {
-	color: rgb(6, 67, 117);
+	color: #0085A1;
 }
 
 
