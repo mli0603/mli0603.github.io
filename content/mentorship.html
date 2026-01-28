@@ -21,27 +21,35 @@
                 website: "https://zhendong-wang.github.io/"
             },
             {
-                name: "Xiaorui Zhang",
+                name: "Ray Zhang",
                 currentPosition: "Intuitive Surgical",
+                website: "https://www.linkedin.com/in/ray-zhang-0802871a4/"
             },
             {
                 name: "Wenkai Luo",
                 currentPosition: "Cornerstone Robotics",
+                website: "https://www.linkedin.com/in/wenkai-luo-jhurobo/"
             }
             // Add more mentees here as needed
         ];
 
         function generateMenteeList(mentees) {
-            let listContent = '<ul class="mentee-list">';
+            let listContent = '<div class="mentee-grid">';
             mentees.forEach(mentee => {
+                const linkIcon = mentee.website ? '<i class="fas fa-external-link-alt mentee-link-icon"></i>' : '';
+                const wrapper = mentee.website 
+                    ? `<a href="${mentee.website}" target="_blank" class="mentee-card">`
+                    : `<div class="mentee-card">`;
+                const wrapperClose = mentee.website ? '</a>' : '</div>';
+                
                 listContent += `
-                    <li class="mentee-item">
-                        ${mentee.website ? `<a href="${mentee.website}" target="_blank" class="mentee-name">${mentee.name}</a>` : `<span class="mentee-name">${mentee.name}</span>`}
-                        <span class="mentee-position"> - ${mentee.currentPosition}</span>
-                    </li>
+                    ${wrapper}
+                        <div class="mentee-name">${mentee.name} ${linkIcon}</div>
+                        <div class="mentee-position">${mentee.currentPosition}</div>
+                    ${wrapperClose}
                 `;
             });
-            listContent += '</ul>';
+            listContent += '</div>';
             return listContent;
         }
 
@@ -57,34 +65,52 @@
             margin-bottom: 2rem;
         }
         
-        .mentee-list {
-            list-style: none;
-            padding-left: 2rem;
-            line-height: 1.8;
+        .mentee-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            padding: 0;
         }
         
-        .mentee-item {
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
+        .mentee-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 16px 20px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s ease;
+            border: 1px solid #e9ecef;
+        }
+        
+        a.mentee-card:hover {
+            background: #f0f1f3;
+            border-color: #d0d4d9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
         
         .mentee-name {
             font-weight: 600;
-            color: rgb(6, 67, 117);
+            color: #6b5b95;
+            font-size: 1rem;
+            margin-bottom: 4px;
         }
         
-        .mentee-name a {
-            color: rgb(6, 67, 117);
-            text-decoration: none;
-        }
-        
-        .mentee-name a:hover {
-            text-decoration: underline;
+        .mentee-link-icon {
+            font-size: 0.75rem;
+            margin-left: 6px;
+            opacity: 0.7;
         }
         
         .mentee-position {
-            color: #333;
-            font-weight: normal;
+            color: #868e96;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 576px) {
+            .mentee-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </section>

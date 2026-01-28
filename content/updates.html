@@ -10,7 +10,7 @@
     <script>
         const updates = [
             { date: '01.27.2026', message: '<a class="paper" href="https://research.nvidia.com/labs/dir/scenethesis/">Scenethesis</a>, an agentic framework for 3D scene generation, has been accepted by ICLR 2026!'},         
-            { date: '12.07.2025', message: 'Our team won the <a class="paper" href="https://github.com/mli0603/openpi-comet">2nd place</a> in the 2025 BEHAVIOR Challenge @ NeurIPS 2025!'},         
+            { date: '12.07.2025', message: '<a class="paper" href="https://github.com/mli0603/openpi-comet">Open-pi Comet</a> won the 2nd place in the 2025 BEHAVIOR Challenge @ NeurIPS 2025!'},         
             { date: '10.28.2025', message: 'We released <a class="paper" href="https://research.nvidia.com/labs/dir/cosmos-predict2.5/">Cosmos Predict2.5</a>, an improved world foundation model platform for physical AI!'},     
             { date: '06.12.2025', message: '<a class="paper" href="https://research.nvidia.com/labs/dir/partpacker/">PartPacker</a>, 3D generation with parts has been accepted by NeurIPS 2025!'},     
             { date: '06.10.2025', message: 'We released <a class="paper" href="https://research.nvidia.com/labs/dir/cosmos-reason1/">Cosmos Reason1</a> -- now it is also a video critique model!'}, 
@@ -25,23 +25,95 @@
             { date: '10.24.2023', message: 'Neuralangelo has been named as the <a class="paper" href="https://time.com/collection/best-inventions-2023/6324133/neuralangelo/">TIME\'s Best Inventions of 2023!</a>' },
             // { date: '07.30.2021', message: '<a class="paper" href="https://github.com/mli0603/stereo-transformer">STTR</a> accepted at ICCV 2021 as an <span class="award">Oral Paper</span>!' }
         ];
-        function generateTable(updates) {
-            let tableContent = '<table style="width: auto;">';
+        
+        function generateTimeline(updates) {
+            let content = '<div class="timeline">';
             updates.forEach(update => {
-            tableContent += `
-                <tr>
-                <td style="width:20%">
-                    <div class="date">${update.date}</div>
-                </td>
-                <td>
-                    ${update.message}
-                </td>
-                </tr>
-            `;
+                content += `
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">${update.date}</span>
+                            <p class="timeline-message">${update.message}</p>
+                        </div>
+                    </div>
+                `;
             });
-            tableContent += '</table>';
-            return tableContent;
+            content += '</div>';
+            return content;
         }
-        document.querySelector('.section-updates').insertAdjacentHTML('beforeend', generateTable(updates));
+        
+        document.querySelector('.section-updates').insertAdjacentHTML('beforeend', generateTimeline(updates));
     </script>
+    
+    <style>
+        .timeline {
+            position: relative;
+            padding-left: 24px;
+            margin-left: 8px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            bottom: 8px;
+            width: 3px;
+            background: linear-gradient(to bottom, #0085A1, #b3d9e3);
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-marker {
+            position: absolute;
+            left: -24px;
+            top: 6px;
+            width: 11px;
+            height: 11px;
+            background: #0085A1;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 0 3px #e8f4f8;
+        }
+        
+        .timeline-content {
+            padding-left: 8px;
+        }
+        
+        .timeline-date {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #0085A1;
+            background: #e8f4f8;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-bottom: 6px;
+        }
+        
+        .timeline-message {
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        .timeline-message a.paper {
+            color: rgb(6, 67, 117);
+            font-weight: 500;
+        }
+        
+        .timeline-message a.paper:hover {
+            text-decoration: underline;
+        }
+    </style>
 </section>

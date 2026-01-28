@@ -157,7 +157,7 @@
 
         function generatePublicationBlock(publication) {
             return `
-                <div class="row align-items-center">
+                <div class="row align-items-center pub-row">
                     <div class="col-md-5 text-center">
                         ${publication.videoSrc.endsWith('.mp4') || publication.videoSrc.endsWith('.webm') ? `
                         <video width="100%" autoplay muted loop playsinline oncontextmenu="return false;">
@@ -171,20 +171,28 @@
                     <div class="col-md-7 work-publication">
                         <div class="details">
                             <div class="paper">
-                                <a href="${publication.projectPageLink}" style="color:rgb(6, 67, 117)">${publication.paperTitle}</a>
-                                <br>
-                                <small>${publication.contributors}</small>
-                                <br>
-                                ${publication.conference ? `<small style="color:rgb(6, 67, 117)">${publication.conference}</small><br>` : ''}
+                                <a href="${publication.projectPageLink}" class="pub-title">${publication.paperTitle}</a>
+                                <div class="pub-authors">${publication.contributors}</div>
+                                ${publication.conference ? `<div class="pub-venue">${publication.conference}</div>` : ''}
                             </div>
                         </div>
-                        <a href="${publication.pdfLink}"><i class="fa-regular fa-file-pdf fa-1x"></i><small>&nbsp; Paper</small></a>
-                        <a href="#" onclick="showBibtex('${publication.bibtexLink}'); return false;" style="padding-left: 1em;"><i class="fa-regular fa-note-sticky fa-1x"></i><small>&nbsp; Bibtex</small></a>
-                        <a href="${publication.projectPageLink}" style="padding-left: 1em;"><i class="fa fa-external-link fa-1x"></i><small>&nbsp; Project Page</small></a>
-                        ${publication.productPageLink ? `<a href="${publication.productPageLink}" style="padding-left: 1em;"><i class="fa fa-codepen fa-1x"></i><small>&nbsp; Product Page</small></a>` : ''}
+                        <div class="pub-links">
+                            <a href="${publication.pdfLink}" class="pub-btn pub-btn-paper" target="_blank">
+                                <i class="fa-regular fa-file-pdf"></i> Paper
+                            </a>
+                            <a href="#" onclick="showBibtex('${publication.bibtexLink}'); return false;" class="pub-btn pub-btn-bibtex">
+                                <i class="fa-regular fa-note-sticky"></i> Bibtex
+                            </a>
+                            <a href="${publication.projectPageLink}" class="pub-btn pub-btn-project" target="_blank">
+                                <i class="fa fa-external-link"></i> Project
+                            </a>
+                            ${publication.productPageLink ? `
+                            <a href="${publication.productPageLink}" class="pub-btn pub-btn-product" target="_blank">
+                                <i class="fa fa-codepen"></i> Product
+                            </a>` : ''}
+                        </div>
                     </div>
                 </div>
-                <br>
             `;
         }
 
@@ -194,6 +202,128 @@
             publications.map(generatePublicationBlock).join('')
         );
     </script>
+    
+    <style>
+        .pub-row {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .pub-row:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .pub-title {
+            color: rgb(6, 67, 117);
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+            line-height: 1.4;
+        }
+        
+        .pub-title:hover {
+            text-decoration: underline;
+        }
+        
+        .pub-authors {
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+        
+        .pub-venue {
+            font-size: 0.9rem;
+            color: rgb(6, 67, 117);
+            margin-top: 4px;
+            font-weight: 500;
+        }
+        
+        .pub-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        
+        .pub-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        
+        .pub-btn i {
+            font-size: 0.9rem;
+        }
+        
+        .pub-btn-paper {
+            background: #f8f8f8;
+            color: #6b7280;
+            border: 1px solid #e5e5e5;
+        }
+        
+        .pub-btn-paper:hover {
+            background: #6b7280;
+            color: #fff;
+            border-color: #6b7280;
+        }
+        
+        .pub-btn-bibtex {
+            background: #f8f8f8;
+            color: #6b7280;
+            border: 1px solid #e5e5e5;
+        }
+        
+        .pub-btn-bibtex:hover {
+            background: #6b7280;
+            color: #fff;
+            border-color: #6b7280;
+        }
+        
+        .pub-btn-project {
+            background: #f0f7f9;
+            color: #5a9aa8;
+            border: 1px solid #d8e8ec;
+        }
+        
+        .pub-btn-project:hover {
+            background: #5a9aa8;
+            color: #fff;
+            border-color: #5a9aa8;
+        }
+        
+        .pub-btn-product {
+            background: #f5f3f7;
+            color: #7d7094;
+            border: 1px solid #e5e0ec;
+        }
+        
+        .pub-btn-product:hover {
+            background: #7d7094;
+            color: #fff;
+            border-color: #7d7094;
+        }
+        
+        @media (max-width: 576px) {
+            .pub-links {
+                gap: 6px;
+            }
+            
+            .pub-btn {
+                padding: 5px 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
     
     <!-- Include the BibTeX functionality -->
     <script src="js/bibtex-popup.js"></script>

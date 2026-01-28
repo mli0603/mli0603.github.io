@@ -4,29 +4,51 @@
 	margin: 0 auto;
 	position: relative;
 	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: row;
 }
 
 .main-wrapper {
 	padding-top: 60px;
 	padding-bottom: 10px;
 	padding-left: 20px;
-	padding-right: 250px;
+	padding-right: 20px;
 	font-size: 16px;
 	font-weight: 500;
+	flex: 1;
+	min-width: 0;
 }
 
 .sidebar-wrapper {
-	position: absolute;
+	position: sticky;
+	top: 20px;
+	padding-left: 50px;
 	padding-right: 20px;
 	padding-top: 20px;
-	right: 0;
-	top: 0;
-	width: 240px;
-	height: 100%;
-	/* min-height: 800px; */
+	width: 290px;
+	flex-shrink: 0;
+	align-self: flex-start;
 }
 
 /* --- side bar ---*/
+
+.sidebar-wrapper .card {
+	border: none;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	position: relative;
+}
+
+.sidebar-wrapper .card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, #0085A1, #00b4d8);
+}
 
 .card-header {
 	padding: 10px 30px 10px 30px;
@@ -37,9 +59,15 @@
 .avatar {
 	max-width: 100px;
 	margin-bottom: 15px;
-	border: 0px solid #fff;
+	border: 3px solid #0085A1;
 	border-radius: 100%;
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 0 4px rgba(0, 133, 161, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+.avatar:hover {
+	transform: scale(1.05);
+	box-shadow: 0 0 0 6px rgba(0, 133, 161, 0.2), 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .name {
@@ -167,7 +195,8 @@
 }
 
 .fun-fact {
-	margin-top: 25px;
+	margin-top: 12px;
+	margin-bottom: 40px;
 	padding: 15px 20px;
 	background-color: #f8f9fa;
 	border-left: 4px solid #0085A1;
@@ -266,9 +295,13 @@ a.paper:visited {
 		padding: 0;
 	}
 
+	.wrapper {
+		flex-direction: column;
+	}
+
 	.sidebar-wrapper {
 		position: static;
-		width: inherit;
+		width: 100%;
 		padding-left: 20px;
 		padding-right: 20px;
 		padding-top: 0px;
@@ -276,7 +309,7 @@ a.paper:visited {
 	}
 
 	.main-wrapper {
-		padding: 30px;
+		padding: 30px 20px;
 	}
 
 	.main-wrapper .time {
@@ -289,18 +322,15 @@ a.paper:visited {
 		margin-bottom: 0;
 	}
 
-
-}
-
-/* Small devices (tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (min-height: 720px) {
-	.sidebar-wrapper {
-		position: fixed;
+	.fun-fact {
+		padding: 12px 14px;
+		font-size: 13px;
 	}
+
 }
 
 /* Medium devices (desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (min-height: 720px) {
+@media only screen and (min-width: 992px) {
 
 	.skillset .level-title {
 		display: inline-block;
@@ -315,25 +345,6 @@ a.paper:visited {
 		float: left;
 		position: relative;
 		top: 1px;
-	}
-
-	.sidebar-wrapper {
-		position: fixed;
-	}
-}
-
-/* Large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) and (min-height: 720px) {
-	.sidebar-wrapper {
-		position: fixed;
-	}
-}
-
-
-/* Ex-Large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 1400px) and (min-height: 720px) {
-	.sidebar-wrapper {
-		position: fixed;
 	}
 }
 

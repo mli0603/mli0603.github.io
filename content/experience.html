@@ -7,60 +7,136 @@
         </span>
         Work Experience
     </h2>
-    <a class="nav-link" href="https://research.nvidia.com/labs/dir/">
-        <div class="row align-items-center">
-            <div class="col-md-2 text-center">
-                <img src="media/company/nvidia.png" width="50%">
+    
+    <div class="experience-grid">
+        <a class="experience-card" href="https://research.nvidia.com/labs/dir/" target="_blank">
+            <div class="experience-logo">
+                <img src="media/company/nvidia.png" alt="NVIDIA">
             </div>
-            <div class="col-md-10">
-                <span class="company"> Deep Imagination Research, NVIDIA </span>
-                <br>
-                <small> Research Scientist</small>
-                <br>
-                <small>September 2023 – Current</small>
+            <div class="experience-details">
+                <div class="experience-company">Deep Imagination Research, NVIDIA</div>
+                <div class="experience-role">Research Scientist</div>
+                <div class="experience-date">September 2023 – Present</div>
             </div>
-        </div>
-    </a>
-    <!-- <a class="nav-link" href="https://deepimagination.cc/Neuralangelo/">
-        <div class="row align-items-center">
-            <div class="col-md-2 text-center">
-                <img src="media/company/nvidia.png" width="50%">
+            <i class="fas fa-external-link-alt experience-link-icon"></i>
+        </a>
+        
+        <a class="experience-card" href="https://mli0603.github.io/codd/" target="_blank">
+            <div class="experience-logo">
+                <img src="media/company/realitylabs.png" alt="Meta Reality Labs">
             </div>
-            <div class="col-md-10">
-                <span class="company"> Deep Imagination Research, NVIDIA </span>
-                <br>
-                <small> Research Intern</small>
-                <br>
-                <small>June 2022 – August 2022</small>
+            <div class="experience-details">
+                <div class="experience-company">Meta Reality Labs</div>
+                <div class="experience-role">Research Intern</div>
+                <div class="experience-date">June 2021 – August 2021</div>
             </div>
-        </div>
-    </a> -->
-    <a class="nav-link" href="https://mli0603.github.io/codd/">
-        <div class="row align-items-center">
-            <div class="col-md-2 text-center">
-                <img src="media/company/realitylabs.png" width="50%">
+            <i class="fas fa-external-link-alt experience-link-icon"></i>
+        </a>
+        
+        <a class="experience-card" href="https://arxiv.org/abs/2003.09487" target="_blank">
+            <div class="experience-logo">
+                <img src="media/company/intuitive.png" alt="Intuitive">
             </div>
-            <div class="col-md-10">
-                <span class="company"> Meta Reality Labs </span>
-                <br>
-                <small> Research Intern</small>
-                <br>
-                <small>June 2021 – August 2021</small>
+            <div class="experience-details">
+                <div class="experience-company">Intuitive</div>
+                <div class="experience-role">Research Intern</div>
+                <div class="experience-date">June 2019 – August 2019</div>
             </div>
-        </div>
-    </a>
-    <a class="nav-link" href="https://arxiv.org/abs/2003.09487">
-        <div class="row align-items-center">
-            <div class="col-md-2 text-center">
-                <img src="media/company/intuitive.png" width="50%">
-            </div>
-            <div class="col-md-10">
-                <span class="company"> Intuitive </span>
-                <br>
-                <small> Research Intern</small>
-                <br>
-                <small>June 2019 – August 2019</small>
-            </div>
-        </div>
-    </a>
+            <i class="fas fa-external-link-alt experience-link-icon"></i>
+        </a>
+    </div>
+    
+    <style>
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .experience-card {
+            display: flex;
+            align-items: center;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 16px 20px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        .experience-card:hover {
+            background: #f0f1f3;
+            border-color: #d0d4d9;
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .experience-logo {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 20px;
+        }
+        
+        .experience-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .experience-details {
+            flex: 1;
+        }
+        
+        .experience-company {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .experience-role {
+            font-size: 0.9rem;
+            color: #0085A1;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        
+        .experience-date {
+            font-size: 0.85rem;
+            color: #868e96;
+        }
+        
+        .experience-link-icon {
+            color: #868e96;
+            font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            margin-left: 12px;
+        }
+        
+        .experience-card:hover .experience-link-icon {
+            opacity: 1;
+        }
+        
+        @media (max-width: 576px) {
+            .experience-card {
+                padding: 14px 16px;
+            }
+            
+            .experience-logo {
+                width: 45px;
+                height: 45px;
+                margin-right: 14px;
+            }
+            
+            .experience-company {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </section>

@@ -7,62 +7,80 @@
         </span>
         Publications/Preprints
     </h2>
-    <div class="work-publication">
-        <div class="details">
-            <h4 class="job-title">Vision Navigation and 3D Reconstruction</h4>
-            <br>
-            <ul>
+
+    <!-- Tab Navigation -->
+    <ul class="nav nav-tabs publication-tabs" id="publicationTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision"
+                type="button" role="tab" aria-controls="vision" aria-selected="true">
+                <i class="fas fa-eye"></i> Computer Vision
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="robotics-tab" data-bs-toggle="tab" data-bs-target="#robotics"
+                type="button" role="tab" aria-controls="robotics" aria-selected="false">
+                <i class="fas fa-robot"></i> Surgical Robotics
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="clinical-tab" data-bs-toggle="tab" data-bs-target="#clinical"
+                type="button" role="tab" aria-controls="clinical" aria-selected="false">
+                <i class="fas fa-stethoscope"></i> Clinical Analysis
+            </button>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content publication-tab-content" id="publicationTabsContent">
+        <!-- Vision Navigation and 3D Reconstruction -->
+        <div class="tab-pane fade show active" id="vision" role="tabpanel" aria-labelledby="vision-tab">
+            <ul class="publication-list">
                 <li>
-                    <a href="https://arxiv.org/abs/2212.14131" style="color:rgb(6, 67, 117)">Temporally
+                    <a href="https://arxiv.org/abs/2212.14131" class="paper">Temporally
                         Consistent Online Depth Estimation in Dynamic Scenes</a>
                     <br>
                     <small><b>Zhaoshuo Li</b>, Wei Ye, Dilin Wang, Francis X Creighton, Russell H Taylor,
                         Ganesh Venkatesh, Mathias Unberath</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">WACV 2023</small>
+                    <small class="venue">WACV 2023</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2212.14131" style="color:rgb(6, 67, 117)">TAToo:
+                    <a href="https://arxiv.org/abs/2212.14131" class="paper">TAToo:
                         Vision-based Joint Tracking of Anatomy and Tool for Skull-base Surgery</a>
                     <br>
                     <small><b>Zhaoshuo Li</b>, Hongchao Shu, Ruixing Liang, Anna Goodridge, Manish Sahu,
                         Francis X Creighton, Russell H Taylor, Mathias Unberath</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">IPCAI 2023</small>
+                    <small class="venue">IPCAI 2023</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2212.00072" style="color:rgb(6, 67, 117)">Rethinking
+                    <a href="https://arxiv.org/abs/2212.00072" class="paper">Rethinking
                         Causality-driven Robot Tool Segmentation with Temporal Constraints</a>
                     <br>
                     <small>Hao Ding, Jie Ying Wu, <b>Zhaoshuo Li</b>, Mathias Unberath</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">IPCAI 2023</small>
+                    <small class="venue">IPCAI 2023</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2210.11719" style="color:rgb(6, 67, 117)">Context-Enhanced Stereo
+                    <a href="https://arxiv.org/abs/2210.11719" class="paper">Context-Enhanced Stereo
                         Transformer</a>
                     <br>
                     <small>Weiyu Guo, <b>Zhaoshuo Li</b>, Yongkui Yang, Zheng Wang, Russell H Taylor,
                         Mathias Unberath, Alan Yuille, Yingwei Li</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">ECCV 2022</small>
+                    <small class="venue">ECCV 2022</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2202.09487" style="color:rgb(6, 67, 117)">SAGE: SLAM with
+                    <a href="https://arxiv.org/abs/2202.09487" class="paper">SAGE: SLAM with
                         Appearance and Geometry Prior for Endoscopy</a>
                     <br>
                     <small>Xingtong Liu, <b>Zhaoshuo Li</b>, Masaru Ishii, Gregory D Hager, Russell H
                         Taylor, Mathias Unberath</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">ICRA 2022</small>
+                    <small class="venue">ICRA 2022</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2107.00229" style="color:rgb(6, 67, 117)">E-DSSR:
+                    <a href="https://arxiv.org/abs/2107.00229" class="paper">E-DSSR:
                         Efficient Dynamic Surgical Scene Reconstruction with Transformer-based Stereoscopic
                         Depth Perception</a>
                     <br>
@@ -71,37 +89,34 @@
                     <br>
                     <small>*: equal contribution</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">MICCAI 2021</small>
+                    <small class="venue">MICCAI 2021</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2109.06163" style="color:rgb(6, 67, 117)"> On the Sins of
+                    <a href="https://arxiv.org/abs/2109.06163" class="paper"> On the Sins of
                         Image Synthesis Loss for Self-supervised Depth Estimation </a>
                     <br>
                     <small><b>Zhaoshuo Li</b>, Nathan Drenkow, Hao Ding, Andy S. Ding, Alexander Lu, Francis
                         X Creighton, Russell H Taylor, Mathias Unberath</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">Technical Report</small>
+                    <small class="venue">Technical Report</small>
                 </li>
             </ul>
         </div>
 
-        <div class="details">
-            <h4 class="job-title">Robotics and Mixed Reality</h4>
-            <br>
-            <ul>
+        <!-- Robotics and Mixed Reality -->
+        <div class="tab-pane fade" id="robotics" role="tabpanel" aria-labelledby="robotics-tab">
+            <ul class="publication-list">
                 <li>
-                    <a href="https://arxiv.org/abs/2403.06479" style="color:rgb(6, 67, 117)">Ada-Tracker: Soft Tissue
+                    <a href="https://arxiv.org/abs/2403.06479" class="paper">Ada-Tracker: Soft Tissue
                         Tracking via Inter-Frame and Adaptive-Template Matching
                     </a>
                     <br>
                     <small>Jiaxin Guo, Jiangliu Wang, <b>Zhaoshuo Li</b>, Tongyu Jia, Qi Dou, Yun-Hui Liu</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">ICRA 2024</small>
+                    <small class="venue">ICRA 2024</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2303.01733" style="color:rgb(6, 67, 117)">Improving
+                    <a href="https://arxiv.org/abs/2303.01733" class="paper">Improving
                         Surgical Situational Awareness with Signed Distance Field: A Pilot Study in Virtual
                         Reality
                     </a>
@@ -110,11 +125,10 @@
                         Kazanzides, Michael Kazhdan, Danielle Trakimas, Francis X Creighton, Russell H
                         Taylor</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">IROS 2023</small>
+                    <small class="venue">IROS 2023</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2211.11863" style="color:rgb(6, 67, 117)">Twin-S: A
+                    <a href="https://arxiv.org/abs/2211.11863" class="paper">Twin-S: A
                         Digital Twin for Skull-base Surgery</a>
                     <br>
                     <small>Hongchao Shu*, Ruixing Liang*, <b>Zhaoshuo Li*</b>, Anna Goodridge, Xiangyu
@@ -123,60 +137,54 @@
                     <br>
                     <small>*: equal contribution</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">IPCAI 2023</small>
+                    <small class="venue">IPCAI 2023</small>
                     <br>
                     <small><b class="award">Best Paper Award Honorable Mention</b></small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2302.13878" style="color:rgb(6, 67, 117)">Fully Immersive
+                    <a href="https://arxiv.org/abs/2302.13878" class="paper">Fully Immersive
                         Virtual Reality for Skull-base Surgery: Surgical Training and Beyond</a>
                     <br>
                     <small>Adnan Munawar, <b>Zhaoshuo Li</b>, Nimesh Nagururu, Danielle Trakimas, Peter
                         Kazanzides, Russell H Taylor, Francis X Creighton</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">IPCAI 2023</small>
+                    <small class="venue">IPCAI 2023</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2111.08097" style="color:rgb(6, 67, 117)">Virtual reality
+                    <a href="https://arxiv.org/abs/2111.08097" class="paper">Virtual reality
                         for synergistic surgical training and data generation</a>
                     <br>
                     <small>Adnan Munawar, <b>Zhaoshuo Li</b>, Punit Kunjam, Nimesh Nagururu, Andy S. Ding,
                         Peter Kazanzides, Thomas Looi, Francis X Creighton, Russell H Taylor, Mathias
                         Unberath</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">AE-CAI Workshop, MICCAI 2021</small>
+                    <small class="venue">AE-CAI Workshop, MICCAI 2021</small>
                     <br>
                     <small><b class="award">Best Paper Award</b></small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/9286681"
-                        style="color:rgb(6, 67, 117)">Evaluation of Hybrid Control and Palpation Assistance
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9286681" class="paper">Evaluation of Hybrid Control and Palpation Assistance
                         for Situational Awareness in Telemanipulated Task Execution</a>
                     <br>
                     <small>Rashid Yasin, Preetham Chalasani, Nicolas Zevallos, Mahya Shahbazi, <b>Zhaoshuo
                             Li</b>, Anton Deguet, Peter Kazanzides, Howie Choset, Russell H Taylor, Nabil
                         Simaan</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">TMRB 2020</small>
+                    <small class="venue">TMRB 2020</small>
                     <br>
                     <small><b>Journal Article</b></small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2003.09487" style="color:rgb(6, 67, 117)">A Robotic 3D
+                    <a href="https://arxiv.org/abs/2003.09487" class="paper">A Robotic 3D
                         Perception System for Operating Room Environment Awareness</a>
                     <br>
                     <small><b>Zhaoshuo Li</b>, Amirreza Shaban, Jean-Gabriel Simard, Dinesh Rabindran, Simon
                         DiMaio, Omid Mohareri</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">IPCAI 2020</small>
+                    <small class="venue">IPCAI 2020</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/9069297" style="color:rgb(6, 67, 117)">Hybrid
+                    <a href="https://ieeexplore.ieee.org/abstract/document/9069297" class="paper">Hybrid
                         Robot-assisted Frameworks for Endomicroscopy
                         Scanning in Retinal Surgeries</a>
                     <br>
@@ -185,127 +193,226 @@
                         Khushi Vyas, Preetham Chalasani, Anton Deguet, Peter L Gehlbach, Iulian Iordachita,
                         Guang-Zhong Yang, Russell H Taylor</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">TMRB 2020</small>
+                    <small class="venue">TMRB 2020</small>
                     <br>
                     <small><b>Journal Article</b></small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2006.02415"
-                        style="color:rgb(6, 67, 117)">Anatomical Mesh-Based Virtual Fixtures for Surgical Robots</a>
+                    <a href="https://arxiv.org/abs/2006.02415" class="paper">Anatomical Mesh-Based Virtual Fixtures for Surgical Robots</a>
                     <br>
                     <small><b>Zhaoshuo Li</b>, Alex Gordon, Thomas Looi, James Drake, Christopher Forrest,
                         Russell H Taylor</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">IROS 2020</small>
+                    <small class="venue">IROS 2020</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/8967751" style="color:rgb(6, 67, 117)">A
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8967751" class="paper">A
                         Novel Semi-Autonomous Control Framework for Retina
                         Confocal Endomicroscopy Scanning</a>
                     <br>
-                    <small><b>Zhaoshuo Li</b>, Mahya Shahbazi, Niravkumar Patel, Eimear O’Sullivan, Haojie
+                    <small><b>Zhaoshuo Li</b>, Mahya Shahbazi, Niravkumar Patel, Eimear O'Sullivan, Haojie
                         Zhang, Khushi Vyas, Preetham Chalasani, Peter L Gehlbach, Iulian Iordachita,
                         Guang-Zhong Yang, Russell H Taylor</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">IROS 2019</small>
+                    <small class="venue">IROS 2019</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://ieeexplore.ieee.org/abstract/document/8302518" style="color:rgb(6, 67, 117)">Free
+                    <a href="https://ieeexplore.ieee.org/abstract/document/8302518" class="paper">Free
                         head movement eye gaze contingent ultrasound
                         interfaces for the da vinci surgical system</a>
                     <br>
                     <small><b>Zhaoshuo Li</b>, Irene Tong, Leo Metcalf, Craig Hennessey, Septimiu E
                         Salcudean</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">ICRA/RAL 2018</small>
+                    <small class="venue">ICRA/RAL 2018</small>
                     <br>
                     <small><b>Journal Article</b></small>
                 </li>
-                <br>
                 <li>
                     <a href="https://smarts.lcsr.jhu.edu/wp-content/uploads/2017/04/Eye-Gaze-Contingent-Ultrasound-Interfaces-for-da-Vinci-Surgical-System.pdf"
-                        style="color:rgb(6, 67, 117)">Eye Gaze Contingent Ultrasound Interfaces for the da
+                        class="paper">Eye Gaze Contingent Ultrasound Interfaces for the da
                         Vinci Surgical System</a>
                     <br>
                     <small><b>Zhaoshuo Li</b>, Irene Tong, Septimiu E Salcudean</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">Shared Platforms Workshop, IROS 2017</small>
+                    <small class="venue">Shared Platforms Workshop, IROS 2017</small>
                 </li>
             </ul>
         </div>
 
-        <div class="details">
-            <h4 class="job-title">Clinical Analysis</h4>
-            <br>
-            <ul>
+        <!-- Clinical Analysis -->
+        <div class="tab-pane fade" id="clinical" role="tabpanel" aria-labelledby="clinical-tab">
+            <ul class="publication-list">
                 <li>
                     <a href="https://aao-hnsfjournals.onlinelibrary.wiley.com/doi/10.1002/ohn.317"
-                        style="color:rgb(6, 67, 117)">A Self-Configuring Deep Learning Network for
+                        class="paper">A Self-Configuring Deep Learning Network for
                         Segmentation of Temporal Bone Anatomy in Cone-Beam CT Imaging</a>
                     <br>
                     <small>Andy S Ding, Alexander Lu, <b>Zhaoshuo Li</b>, Manish Sahu, Deepa Galaiya,
                         Jeffrey H
                         Siewerdsen, Mathias Unberath, Russell H Taylor, Francis X Creighton</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">Otolaryngology–Head and Neck Surgery 2023</small>
+                    <small class="venue">Otolaryngology–Head and Neck Surgery 2023</small>
                 </li>
-                <br>
                 <li>
                     <a href="https://journals.lww.com/otology-neurotology/Abstract/2022/07000/Statistical_Shape_Model_of_the_Temporal_Bone_Using.26.aspx?context=LatestArticles"
-                        style="color:rgb(6, 67, 117)">Statistical
+                        class="paper">Statistical
                         Shape Model of the Temporal Bone Using Segmentation Propagation</a>
                     <br>
                     <small>Andy S Ding, Alexander Lu, <b>Zhaoshuo Li</b>, Deepa Galaiya, Masaru Ishii,
                         Jeffrey H Siewerdsen, Russell H Taylor, Francis X Creighton</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">Otology & Neurotology 2022</small>
+                    <small class="venue">Otology & Neurotology 2022</small>
                 </li>
-                <br>
                 <li>
                     <a href="https://journals.sagepub.com/doi/abs/10.1177/01945998221076801"
-                        style="color:rgb(6, 67, 117)">Automated Extraction of Anatomical Measurements From
+                        class="paper">Automated Extraction of Anatomical Measurements From
                         Temporal Bone CT Imaging</a>
                     <br>
                     <small>Andy S Ding, Alexander Lu, <b>Zhaoshuo Li</b>, Deepa Galaiya, Masaru Ishii,
                         Jeffrey H Siewerdsen, Russell H Taylor, Francis X Creighton</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">Otolaryngology–Head and Neck Surgery 2022</small>
+                    <small class="venue">Otolaryngology–Head and Neck Surgery 2022</small>
                 </li>
-                <br>
                 <li>
                     <a href="https://journals.sagepub.com/doi/abs/10.1177/01945998211044982"
-                        style="color:rgb(6, 67, 117)">Automated registration-based temporal bone computed
+                        class="paper">Automated registration-based temporal bone computed
                         tomography segmentation for applications in neurotologic surgery</a>
                     <br>
                     <small>Andy S Ding, Alexander Lu, <b>Zhaoshuo Li</b>, Deepa Galaiya, Jeffrey H
                         Siewerdsen, Russell H Taylor, Francis X Creighton</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">Otolaryngology–Head and Neck Surgery 2021</small>
+                    <small class="venue">Otolaryngology–Head and Neck Surgery 2021</small>
                 </li>
-                <br>
                 <li>
-                    <a href="https://arxiv.org/abs/2105.10238" style="color:rgb(6, 67, 117)">An
+                    <a href="https://arxiv.org/abs/2105.10238" class="paper">An
                         Interpretable Approach to Automated Severity Scoring in Pelvic Trauma</a>
                     <br>
                     <small>Anna Zapaishchykova, David Dreizin, <b>Zhaoshuo Li</b>, Jie Ying Wu, Shahrooz
                         Faghih Roohi, Mathias Unberath</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">MICCAI 2021</small>
+                    <small class="venue">MICCAI 2021</small>
                 </li>
-                <br>
                 <li>
                     <a href="https://www.ingentaconnect.com/content/wk/mao/2021/00000042/00000010/art00025"
-                        style="color:rgb(6, 67, 117)">Volumetric Accuracy Analysis of Virtual Safety
+                        class="paper">Volumetric Accuracy Analysis of Virtual Safety
                         Barriers for Cooperative-Control Robotic Mastoidectomy</a>
                     <br>
                     <small>Andy S Ding, Sarah Capostagno, Christopher R Razavi, <b>Zhaoshuo Li</b>, Russell
                         H Taylor, John P Carey, Francis X Creighton</small>
                     <br>
-                    <small style="color:rgb(6, 67, 117)">Otology & Neurotology 2021</small>
+                    <small class="venue">Otology & Neurotology 2021</small>
                 </li>
             </ul>
         </div>
+    </div>
 </section>
+
+<style>
+/* Publication Tabs Styling */
+.publication-tabs {
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 0;
+}
+
+.publication-tabs .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: #6c757d;
+    font-weight: 500;
+    padding: 12px 20px;
+    margin-bottom: -2px;
+    transition: all 0.2s ease;
+}
+
+.publication-tabs .nav-link:hover {
+    color: #0085A1;
+    border-bottom-color: #b3d9e3;
+}
+
+.publication-tabs .nav-link.active {
+    color: #0085A1;
+    background: none;
+    border-bottom-color: #0085A1;
+}
+
+.publication-tabs .nav-link i {
+    margin-right: 6px;
+}
+
+.publication-tab-content {
+    padding: 20px 0;
+}
+
+.publication-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.publication-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.publication-list li:last-child {
+    border-bottom: none;
+}
+
+.publication-list a.paper {
+    color: rgb(6, 67, 117);
+    font-weight: 500;
+}
+
+.publication-list a.paper:hover {
+    text-decoration: underline;
+}
+
+.publication-list .venue {
+    color: rgb(6, 67, 117);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .publication-tabs .nav-link {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    .publication-tabs .nav-link i {
+        display: none;
+    }
+}
+</style>
+
+<script>
+// Initialize Bootstrap tabs - runs immediately since content is loaded via jQuery .load()
+(function() {
+    var tabElms = document.querySelectorAll('button[data-bs-toggle="tab"]');
+    tabElms.forEach(function(tabElm) {
+        tabElm.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+            // Remove active from all tabs
+            document.querySelectorAll('.publication-tabs .nav-link').forEach(function(tab) {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-selected', 'false');
+            });
+            
+            // Add active to clicked tab
+            this.classList.add('active');
+            this.setAttribute('aria-selected', 'true');
+            
+            // Hide all panes
+            document.querySelectorAll('.publication-tab-content .tab-pane').forEach(function(pane) {
+                pane.classList.remove('show', 'active');
+            });
+            
+            // Show target pane
+            var target = document.querySelector(this.getAttribute('data-bs-target'));
+            if (target) {
+                target.classList.add('show', 'active');
+            }
+        });
+    });
+})();
+</script>
