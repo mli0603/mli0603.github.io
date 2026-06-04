@@ -39,18 +39,66 @@
 	<!-- Custom styles for this template -->
 	<link href="css/clean-blog.css" rel="stylesheet">
 	<link href="css/about-me.css" rel="stylesheet">
+	<style>
+		.home-page .main-wrapper > div > section {
+			margin: 0;
+		}
+
+		.home-page .main-wrapper > div + div > section {
+			margin-top: 36px;
+			padding-top: 36px;
+			border-top: 1px solid #f0f0f0;
+		}
+
+		.home-page .research-work {
+			margin-top: 36px;
+			padding-top: 36px;
+			border-top: 1px solid #f0f0f0;
+		}
+
+		.home-page .section-title-research {
+			margin-bottom: 20px;
+		}
+
+		.home-page #footer footer .list-inline,
+		.home-page #footer footer br {
+			display: none;
+		}
+
+		@media only screen and (max-width: 900px) {
+			html,
+			body {
+				max-width: 100%;
+				overflow-x: hidden;
+			}
+
+			.home-page .wrapper {
+				width: 100%;
+				flex-direction: column;
+			}
+
+			.home-page .main-wrapper,
+			.home-page .sidebar-wrapper {
+				width: 100%;
+				max-width: 100%;
+			}
+
+			.home-page .sidebar-wrapper {
+				position: static;
+				height: auto;
+				display: block;
+				padding: 0 20px 30px;
+			}
+		}
+	</style>
 </head>
 
-<body>
+<body class="home-page">
 	<!-- Main Content -->
 	<div class="wrapper">
 		<div class="main-wrapper">
 			<div id="about-me"></div>
-			<div id="updates"></div>
 			<div id="selected-publication"></div>
-			<div id="experience"></div>
-			<div id="mentorship"></div>
-			<div id="publication"></div>
 		</div>
 
 		<div id="profile-bar"></div>
@@ -61,11 +109,7 @@
 	<script>
 		$(function () {
 			$("#about-me").load("content/about-me.html");
-			$("#updates").load("content/updates.html");
 			$("#selected-publication").load("content/selected-publication.html");
-			$("#experience").load("content/experience.html");
-			$("#mentorship").load("content/mentorship.html");
-			$("#publication").load("content/publication.html");
 			$("#profile-bar").load("content/profile-bar.html");
 			$("#footer").load("content/footer.html");
 		});

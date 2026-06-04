@@ -3,22 +3,76 @@
     <h2 class="section-title">
         <span class="fa-stack fa-xs">
             <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fas fa-certificate fa-stack-1x fa-inverse"></i>
+            <i class="fas fa-robot fa-stack-1x fa-inverse"></i>
         </span>
-        Selected Work
+        Foundation Models
     </h2>
+
+    <div class="foundation-work">
+        <div class="foundation-layout">
+            <article class="foundation-card foundation-card-featured">
+                <a class="foundation-media" href="https://research.nvidia.com/labs/cosmos-lab/cosmos3/" target="_blank">
+                    <video autoplay muted loop playsinline oncontextmenu="return false;">
+                        <source src="media/projects/cosmos3.mp4" type="video/mp4">
+                    </video>
+                </a>
+                <div class="foundation-body">
+                    <h4><a href="https://research.nvidia.com/labs/cosmos-lab/cosmos3/" target="_blank">Cosmos 3: Omnimodal World Models for Physical AI</a></h4>
+                    <div class="foundation-role">Tech Lead</div>
+                    <div class="foundation-links">
+                        <a href="https://arxiv.org/abs/2606.02800" target="_blank"><i class="fa-regular fa-file-pdf"></i> Paper</a>
+                        <a href="https://research.nvidia.com/labs/cosmos-lab/cosmos3/" target="_blank"><i class="fa fa-external-link"></i> Project</a>
+                    </div>
+                </div>
+            </article>
+
+            <div class="foundation-compact-list">
+                <a class="foundation-compact" href="https://research.nvidia.com/labs/cosmos-lab/cosmos-predict2.5/" target="_blank">
+                    <video autoplay muted loop playsinline poster="media/projects/posters/cosmos_predict2p5.jpg" oncontextmenu="return false;">
+                        <source src="media/projects/cosmos_predict2p5.mp4" type="video/mp4">
+                    </video>
+                    <span>
+                        <strong>Cosmos-Predict2.5</strong>
+                        <small>Improved World Simulation with Video Foundation Models for Physical AI</small>
+                    </span>
+                </a>
+                <a class="foundation-compact" href="https://research.nvidia.com/labs/cosmos-lab/cosmos-reason1/" target="_blank">
+                    <video autoplay muted loop playsinline poster="media/projects/posters/cosmos_reason1.jpg" oncontextmenu="return false;">
+                        <source src="media/projects/cosmos_reason1.mp4" type="video/mp4">
+                    </video>
+                    <span>
+                        <strong>Cosmos-Reason1</strong>
+                        <small>From Physical Common Sense To Embodied Reasoning</small>
+                    </span>
+                </a>
+                <a class="foundation-compact" href="https://research.nvidia.com/labs/cosmos-lab/cosmos-predict1/" target="_blank">
+                    <video autoplay muted loop playsinline poster="media/projects/posters/cosmos.jpg" oncontextmenu="return false;">
+                        <source src="media/projects/cosmos.mp4" type="video/mp4">
+                    </video>
+                    <span>
+                        <strong>Cosmos-Predict1</strong>
+                        <small>World Foundation Model Platform for Physical AI</small>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="research-work">
+        <h2 class="section-title section-title-research">
+            <span class="fa-stack fa-xs">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-flask fa-stack-1x fa-inverse"></i>
+            </span>
+            Publications
+        </h2>
+        <div class="research-groups"></div>
+    </div>
 
     <script>
         const publications = [
             {
-                videoSrc: "media/projects/cosmos3.mp4",
-                paperTitle: "Cosmos 3: Omnimodal World Models for Physical AI",
-                contributors: "Tech Lead",
-                pdfLink: "media/projects/cosmos3.pdf",
-                bibtexLink: "bib/nvidia2026cosmos3omnimodalworldmodels.bib",
-                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/cosmos3/"
-            },
-            {
+                theme: "3D Generation & Reconstruction",
                 videoSrc: "media/projects/sage.mp4",
                 paperTitle: "SAGE: Scalable Agentic 3D Scene Generation for Embodied AI",
                 contributors: "Hongchi Xia, Xuan Li, <b>Zhaoshuo Li</b>, Qianli Ma, Jiashu Xu, Ming-Yu Liu, Yin Cui, Tsung-Yi Lin, Wei-Chiu Ma, Shenlong Wang, Shuran Song, Fangyin Wei",
@@ -28,6 +82,7 @@
                 projectPageLink: "https://nvlabs.github.io/sage/"
             },
             {
+                theme: "Multimodal Generation",
                 videoSrc: "media/projects/duogen.mp4",
                 paperTitle: "DuoGen: Towards General Purpose Interleaved Multimodal Generation",
                 contributors: "Min Shi, Xiaohui Zeng, Jiannan Huang, Yin Cui, Francesco Ferroni, Jialuo Li, Shubham Pachori, <b>Zhaoshuo Li</b>, Yogesh Balaji, Haoxiang Wang, Tsung-Yi Lin, Xiao Fu, Yue Zhao, Chieh-Yun Chen, Ming-Yu Liu, Humphrey Shi",
@@ -37,67 +92,7 @@
                 projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/duogen/"
             },
             {
-                videoSrc: "media/projects/scenethesis.mp4",
-                paperTitle: "Scenethesis: A Language and Vision Agentic Framework for 3D Scene Generation",
-                contributors: "Lu Ling, Chen-Hsuan Lin, Tsung-Yi Lin, Yifan Ding, Yu Zeng, Yichen Sheng, Yunhao Ge, Ming-Yu Liu, Aniket Bera, <b>Zhaoshuo Li</b>",
-                conference: "ICLR 2026",
-                pdfLink: "https://arxiv.org/abs/2505.02836",
-                bibtexLink: "bib/ling2025scenethesislanguagevisionagentic.bib",
-                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/scenethesis/"
-            },
-            {
-                videoSrc: "media/projects/openpi_comet.mp4",
-                paperTitle: "Openpi Comet: Competition Solution For 2025 BEHAVIOR Challenge",
-                contributors: "Core contributor",
-                conference: "NeurIPS 2025, <b class='award'>2nd place</b>",
-                pdfLink: "https://arxiv.org/abs/2512.10071",
-                bibtexLink: "bib/bai2025openpicometcompetitionsolution.bib",
-                projectPageLink: "https://github.com/mli0603/openpi-comet"
-            },
-            {
-                videoSrc: "media/projects/partpacker.mp4",
-                paperTitle: "PartPacker: Efficient Part-level 3D Object Generation via Dual Volume Packing",
-                contributors: "Jiaxiang Tang, Ruijie Lu, <b>Zhaoshuo Li</b>, Zekun Hao, Xuan Li, Fangyin Wei, Shuran Song, Gang Zeng, Ming-Yu Liu, Tsung-Yi Lin",
-                conference: "NeurIPS 2025",
-                pdfLink: "https://arxiv.org/abs/2506.09980",
-                bibtexLink: "bib/tang2025efficientpartlevel3dobject.bib",
-                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/partpacker/"
-            },
-            {
-                videoSrc: "media/projects/cosmos_predict2p5.mp4",
-                paperTitle: "Cosmos-Predict2.5: Improved World Simulation with Video Foundation Models for Physical AI",
-                contributors: "Core contributor",
-                pdfLink: "https://arxiv.org/abs/2511.00062",
-                bibtexLink: "bib/nvidia2025worldsimulationvideofoundation.bib",
-                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/cosmos-predict2.5/"
-            },
-            {
-                videoSrc: "media/projects/cosmos_reason1.mp4",
-                paperTitle: "Cosmos-Reason1: From Physical Common Sense To Embodied Reasoning",
-                contributors: "Core contributor",
-                pdfLink: "https://arxiv.org/abs/2503.15558",
-                bibtexLink: "bib/nvidia2025cosmosreason1physicalcommonsense.bib",
-                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/cosmos-reason1/",
-            },
-            {
-                videoSrc: "media/projects/artiscene.gif",
-                paperTitle: "ArtiScene: Language-Driven Artistic 3D Scene Generation Through Image Intermediary",
-                contributors: "Zeqi Gu, Yin Cui, <b>Zhaoshuo Li</b>, Fangyin Wei, Yunhao Ge, Jinwei Gu, Ming-Yu Liu, Abe Davis, Yifan Ding",
-                conference: "CVPR 2025",
-                pdfLink: "https://arxiv.org/abs/2506.00742",
-                bibtexLink: "bib/gu2025artiscene.bib",
-                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/artiscene/"
-            },
-            {
-                videoSrc: "media/projects/onedp.mp4",
-                paperTitle: "One-Step Diffusion Policy: Fast Visuomotor Policies via Diffusion Distillation",
-                contributors: "Zhendong Wang, <b>Zhaoshuo Li</b>, Ajay Mandlekar, Zhenjia Xu, Jiaojiao Fan, Yashraj Narang, Linxi Fan, Yuke Zhu, Yogesh Balaji, Mingyuan Zhou, Ming-Yu Liu, Yu Zeng",
-                conference: "ICML 2025",
-                pdfLink: "https://arxiv.org/abs/2410.21257",
-                bibtexLink: "bib/wang2024onestep.bib",
-                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/onedp/"
-            },
-            {
+                theme: "Embodied AI",
                 videoSrc: "media/projects/cot-vla.mp4",
                 paperTitle: "CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models",
                 contributors: "Qingqing Zhao, Yao Lu, Moo Jin Kim, Zipeng Fu, Zhuoyang Zhang, Yecheng Wu, <b>Zhaoshuo Li</b>, Qianli Ma, Song Han, Chelsea Finn, Ankur Handa, Ming-Yu Liu, Donglai Xiang, Gordon Wetzstein, Tsung-Yi Lin",
@@ -107,6 +102,66 @@
                 projectPageLink: "https://cot-vla.github.io/",
             },
             {
+                theme: "Embodied AI",
+                videoSrc: "media/projects/pio.mp4",
+                paperTitle: "Point-It-Out: Benchmarking Embodied Reasoning for Vision Language Models in Multi-Stage Visual Grounding",
+                contributors: "Haotian Xue, Yunhao Ge, Yu Zeng, <b>Zhaoshuo Li</b>, Ming-Yu Liu, Yongxin Chen, Jiaojiao Fan",
+                conference: "TMLR",
+                pdfLink: "https://arxiv.org/abs/2509.25794",
+                bibtexLink: "bib/xue2026pointitout.bib",
+                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/pio/"
+            },
+            {
+                theme: "3D Generation & Reconstruction",
+                videoSrc: "media/projects/scenethesis.mp4",
+                paperTitle: "Scenethesis: A Language and Vision Agentic Framework for 3D Scene Generation",
+                contributors: "Lu Ling, Chen-Hsuan Lin, Tsung-Yi Lin, Yifan Ding, Yu Zeng, Yichen Sheng, Yunhao Ge, Ming-Yu Liu, Aniket Bera, <b>Zhaoshuo Li</b>",
+                conference: "ICLR 2026",
+                pdfLink: "https://arxiv.org/abs/2505.02836",
+                bibtexLink: "bib/ling2025scenethesislanguagevisionagentic.bib",
+                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/scenethesis/"
+            },
+            {
+                theme: "Embodied AI",
+                videoSrc: "media/projects/openpi_comet.mp4",
+                paperTitle: "Openpi Comet: Competition Solution For 2025 BEHAVIOR Challenge",
+                contributors: "Core contributor",
+                conference: "NeurIPS 2025, <b class='award'>2nd place</b>",
+                pdfLink: "https://arxiv.org/abs/2512.10071",
+                bibtexLink: "bib/bai2025openpicometcompetitionsolution.bib",
+                projectPageLink: "https://github.com/mli0603/openpi-comet"
+            },
+            {
+                theme: "3D Generation & Reconstruction",
+                videoSrc: "media/projects/partpacker.mp4",
+                paperTitle: "PartPacker: Efficient Part-level 3D Object Generation via Dual Volume Packing",
+                contributors: "Jiaxiang Tang, Ruijie Lu, <b>Zhaoshuo Li</b>, Zekun Hao, Xuan Li, Fangyin Wei, Shuran Song, Gang Zeng, Ming-Yu Liu, Tsung-Yi Lin",
+                conference: "NeurIPS 2025",
+                pdfLink: "https://arxiv.org/abs/2506.09980",
+                bibtexLink: "bib/tang2025efficientpartlevel3dobject.bib",
+                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/partpacker/"
+            },
+            {
+                theme: "3D Generation & Reconstruction List",
+                paperTitle: "ArtiScene: Language-Driven Artistic 3D Scene Generation Through Image Intermediary",
+                contributors: "Zeqi Gu, Yin Cui, <b>Zhaoshuo Li</b>, Fangyin Wei, Yunhao Ge, Jinwei Gu, Ming-Yu Liu, Abe Davis, Yifan Ding",
+                conference: "CVPR 2025",
+                pdfLink: "https://arxiv.org/abs/2506.00742",
+                bibtexLink: "bib/gu2025artiscene.bib",
+                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/artiscene/"
+            },
+            {
+                theme: "Embodied AI",
+                videoSrc: "media/projects/onedp.mp4",
+                paperTitle: "One-Step Diffusion Policy: Fast Visuomotor Policies via Diffusion Distillation",
+                contributors: "Zhendong Wang, <b>Zhaoshuo Li</b>, Ajay Mandlekar, Zhenjia Xu, Jiaojiao Fan, Yashraj Narang, Linxi Fan, Yuke Zhu, Yogesh Balaji, Mingyuan Zhou, Ming-Yu Liu, Yu Zeng",
+                conference: "ICML 2025",
+                pdfLink: "https://arxiv.org/abs/2410.21257",
+                bibtexLink: "bib/wang2024onestep.bib",
+                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/onedp/"
+            },
+            {
+                theme: "3D Generation & Reconstruction",
                 videoSrc: "media/projects/edgerunner.mp4",
                 paperTitle: "EdgeRunner: Auto-regressive Auto-encoder for Artistic Mesh Generation",
                 contributors: "Jiaxiang Tang, <b>Zhaoshuo Li</b>, Zekun Hao, Xian Liu, Gang Zeng, Ming-Yu Liu, Qinsheng Zhang",
@@ -116,16 +171,7 @@
                 projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/edgerunner/"
             },
             {
-                videoSrc: "media/projects/cosmos.mp4",
-                paperTitle: "Cosmos World Foundation Model Platform for Physical AI",
-                contributors: "Core contributor",
-                conference: "<b class='award'>Best AI and Best Overall of CES 2025</b>",
-                pdfLink: "https://arxiv.org/abs/2501.03575",
-                bibtexLink: "bib/nvidia2025cosmos.bib",
-                projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/cosmos-predict1/",
-                productPageLink: "https://www.nvidia.com/en-us/ai/cosmos/"
-            },
-            {
+                theme: "3D Generation & Reconstruction",
                 videoSrc: "media/projects/edify3d.webm",
                 paperTitle: "Edify 3D: Scalable High-Quality 3D Asset Generation",
                 contributors: "Core contributor",
@@ -135,6 +181,7 @@
                 productPageLink: "https://www.shutterstock.com/discover/generative-ai-3d"
             },
             {
+                theme: "3D Generation & Reconstruction",
                 videoSrc: "media/projects/spacemesh.mp4",
                 paperTitle: "SpaceMesh: A Continuous Representation for Learning Manifold Surface Meshes",
                 contributors: "Tianchang Shen, <b>Zhaoshuo Li</b>, Marc Law, Matan Atzmon, Sanja Fidler, James Lucas, Jun Gao, Nicholas Sharp",
@@ -144,6 +191,7 @@
                 projectPageLink: "https://research.nvidia.com/labs/toronto-ai/space-mesh/"
             },
             {
+                theme: "3D Generation & Reconstruction",
                 videoSrc: "media/projects/genusd.mp4",
                 paperTitle: "GenUSD: 3D scene generation made easy",
                 contributors: "Core contributor",
@@ -153,6 +201,7 @@
                 projectPageLink: "https://blogs.nvidia.com/blog/real-time-3d-generative-ai-research-siggraph-2024/?ncid=so-twit-353134-vt36&linkId=100000277255797"
             },
             {
+                theme: "3D Generation & Reconstruction",
                 videoSrc: "media/projects/neuralangelo.mp4",
                 paperTitle: "Neuralangelo: High-Fidelity Neural Surface Reconstruction",
                 contributors: "<b>Zhaoshuo Li</b>, Thomas M&uumlller, Alex Evans, Russell H Taylor, Mathias Unberath, Ming-Yu Liu, Chen-Hsuan Lin",
@@ -162,16 +211,17 @@
                 projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/neuralangelo/"
             },
             {
-                videoSrc: "media/projects/codd.gif",
+                theme: "3D Generation & Reconstruction List",
                 paperTitle: "Temporally Consistent Online Depth Estimation in Dynamic Scenes",
                 contributors: "<b>Zhaoshuo Li</b>, Wei Ye, Dilin Wang, Francis X Creighton, Russell H Taylor, Ganesh Venkatesh, Mathias Unberath",
                 conference: "WACV 2023",
                 pdfLink: "https://arxiv.org/abs/2111.09337",
                 bibtexLink: "bib/li2023temporally.bib",
-                projectPageLink: "https://mli0603.github.io/codd/"
+                projectPageLink: "https://arxiv.org/abs/2111.09337"
             },
             {
-                videoSrc: "media/projects/sttr.gif",
+                theme: "3D Generation & Reconstruction",
+                videoSrc: "media/projects/sttr.mp4",
                 paperTitle: "Revisiting stereo depth estimation from a sequence-to-sequence perspective with transformers",
                 contributors: "<b>Zhaoshuo Li</b>, Xingtong Liu, Nathan Drenkow, Andy Ding, Francis X Creighton, Russell H Taylor, Mathias Unberath",
                 conference: "ICCV 2021, <b class='award'>Oral</b>",
@@ -181,82 +231,729 @@
             }
         ];
 
-        function generatePublicationBlock(publication) {
+        const additionalPublications = [
+            {
+                theme: "3D Generation & Reconstruction",
+                paperTitle: "Context-Enhanced Stereo Transformer",
+                contributors: "Weiyu Guo, <b>Zhaoshuo Li</b>, Yongkui Yang, Zheng Wang, Russell H Taylor, Mathias Unberath, Alan Yuille, Yingwei Li",
+                conference: "ECCV 2022",
+                projectPageLink: "https://arxiv.org/abs/2210.11719"
+            },
+            {
+                theme: "3D Generation & Reconstruction",
+                paperTitle: "On the Sins of Image Synthesis Loss for Self-supervised Depth Estimation",
+                contributors: "<b>Zhaoshuo Li</b>, Nathan Drenkow, Hao Ding, Andy S. Ding, Alexander Lu, Francis X Creighton, Russell H Taylor, Mathias Unberath",
+                conference: "Technical Report",
+                projectPageLink: "https://arxiv.org/abs/2109.06163"
+            },
+            {
+                theme: "3D Generation & Reconstruction",
+                paperTitle: "TAToo: Vision-based Joint Tracking of Anatomy and Tool for Skull-base Surgery",
+                contributors: "<b>Zhaoshuo Li</b>, Hongchao Shu, Ruixing Liang, Anna Goodridge, Manish Sahu, Francis X Creighton, Russell H Taylor, Mathias Unberath",
+                conference: "IPCAI 2023",
+                projectPageLink: "https://arxiv.org/abs/2212.14131"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Rethinking Causality-driven Robot Tool Segmentation with Temporal Constraints",
+                contributors: "Hao Ding, Jie Ying Wu, <b>Zhaoshuo Li</b>, Mathias Unberath",
+                conference: "IPCAI 2023",
+                projectPageLink: "https://arxiv.org/abs/2212.00072"
+            },
+            {
+                theme: "3D Generation & Reconstruction",
+                paperTitle: "SAGE: SLAM with Appearance and Geometry Prior for Endoscopy",
+                contributors: "Xingtong Liu, <b>Zhaoshuo Li</b>, Masaru Ishii, Gregory D Hager, Russell H Taylor, Mathias Unberath",
+                conference: "ICRA 2022",
+                projectPageLink: "https://arxiv.org/abs/2202.09487"
+            },
+            {
+                theme: "3D Generation & Reconstruction",
+                paperTitle: "E-DSSR: Efficient Dynamic Surgical Scene Reconstruction with Transformer-based Stereoscopic Depth Perception",
+                contributors: "Yonghao Long*, <b>Zhaoshuo Li*</b>, Chi Hang Yee, Chi Fai Ng, Russell H Taylor, Mathias Unberath, Qi Dou",
+                conference: "MICCAI 2021",
+                projectPageLink: "https://arxiv.org/abs/2107.00229"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Ada-Tracker: Soft Tissue Tracking via Inter-Frame and Adaptive-Template Matching",
+                contributors: "Jiaxin Guo, Jiangliu Wang, <b>Zhaoshuo Li</b>, Tongyu Jia, Qi Dou, Yun-Hui Liu",
+                conference: "ICRA 2024",
+                projectPageLink: "https://arxiv.org/abs/2403.06479"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Improving Surgical Situational Awareness with Signed Distance Field: A Pilot Study in Virtual Reality",
+                contributors: "Hisashi Ishida, Juan Antonio Barragan, Adnan Munawar, <b>Zhaoshuo Li</b>, Peter Kazanzides, Michael Kazhdan, Danielle Trakimas, Francis X Creighton, Russell H Taylor",
+                conference: "IROS 2023",
+                projectPageLink: "https://arxiv.org/abs/2303.01733"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Twin-S: A Digital Twin for Skull-base Surgery",
+                contributors: "Hongchao Shu*, Ruixing Liang*, <b>Zhaoshuo Li*</b>, Anna Goodridge, Xiangyu Zhang, Hao Ding, Nimesh Nagururu, Manish Sahu, Francis X Creighton, Russell H Taylor, Adnan Munawar, Mathias Unberath",
+                conference: "IPCAI 2023, <b class='award'>Best Paper Award Honorable Mention</b>",
+                projectPageLink: "https://arxiv.org/abs/2211.11863"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Fully Immersive Virtual Reality for Skull-base Surgery: Surgical Training and Beyond",
+                contributors: "Adnan Munawar, <b>Zhaoshuo Li</b>, Nimesh Nagururu, Danielle Trakimas, Peter Kazanzides, Russell H Taylor, Francis X Creighton",
+                conference: "IPCAI 2023",
+                projectPageLink: "https://arxiv.org/abs/2302.13878"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Virtual reality for synergistic surgical training and data generation",
+                contributors: "Adnan Munawar, <b>Zhaoshuo Li</b>, Punit Kunjam, Nimesh Nagururu, Andy S. Ding, Peter Kazanzides, Thomas Looi, Francis X Creighton, Russell H Taylor, Mathias Unberath",
+                conference: "AE-CAI Workshop, MICCAI 2021, <b class='award'>Best Paper Award</b>",
+                projectPageLink: "https://arxiv.org/abs/2111.08097"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Evaluation of Hybrid Control and Palpation Assistance for Situational Awareness in Telemanipulated Task Execution",
+                contributors: "Rashid Yasin, Preetham Chalasani, Nicolas Zevallos, Mahya Shahbazi, <b>Zhaoshuo Li</b>, Anton Deguet, Peter Kazanzides, Howie Choset, Russell H Taylor, Nabil Simaan",
+                conference: "TMRB 2020",
+                projectPageLink: "https://ieeexplore.ieee.org/abstract/document/9286681"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "A Robotic 3D Perception System for Operating Room Environment Awareness",
+                contributors: "<b>Zhaoshuo Li</b>, Amirreza Shaban, Jean-Gabriel Simard, Dinesh Rabindran, Simon DiMaio, Omid Mohareri",
+                conference: "IPCAI 2020",
+                projectPageLink: "https://arxiv.org/abs/2003.09487"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Hybrid Robot-assisted Frameworks for Endomicroscopy Scanning in Retinal Surgeries",
+                contributors: "<b>Zhaoshuo Li</b>, Mahya Shahbazi, Niravkumar Patel, Eimear O' Sullivan, Haojie Zhang, Khushi Vyas, Preetham Chalasani, Anton Deguet, Peter L Gehlbach, Iulian Iordachita, Guang-Zhong Yang, Russell H Taylor",
+                conference: "TMRB 2020",
+                projectPageLink: "https://ieeexplore.ieee.org/abstract/document/9069297"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Anatomical Mesh-Based Virtual Fixtures for Surgical Robots",
+                contributors: "<b>Zhaoshuo Li</b>, Alex Gordon, Thomas Looi, James Drake, Christopher Forrest, Russell H Taylor",
+                conference: "IROS 2020",
+                projectPageLink: "https://arxiv.org/abs/2006.02415"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "A Novel Semi-Autonomous Control Framework for Retina Confocal Endomicroscopy Scanning",
+                contributors: "<b>Zhaoshuo Li</b>, Mahya Shahbazi, Niravkumar Patel, Eimear O'Sullivan, Haojie Zhang, Khushi Vyas, Preetham Chalasani, Peter L Gehlbach, Iulian Iordachita, Guang-Zhong Yang, Russell H Taylor",
+                conference: "IROS 2019",
+                projectPageLink: "https://ieeexplore.ieee.org/abstract/document/8967751"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Free head movement eye gaze contingent ultrasound interfaces for the da Vinci surgical system",
+                contributors: "<b>Zhaoshuo Li</b>, Irene Tong, Leo Metcalf, Craig Hennessey, Septimiu E Salcudean",
+                conference: "ICRA/RAL 2018",
+                projectPageLink: "https://ieeexplore.ieee.org/abstract/document/8302518"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Eye Gaze Contingent Ultrasound Interfaces for the da Vinci Surgical System",
+                contributors: "<b>Zhaoshuo Li</b>, Irene Tong, Septimiu E Salcudean",
+                conference: "Shared Platforms Workshop, IROS 2017",
+                projectPageLink: "https://smarts.lcsr.jhu.edu/wp-content/uploads/2017/04/Eye-Gaze-Contingent-Ultrasound-Interfaces-for-da-Vinci-Surgical-System.pdf"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "A Self-Configuring Deep Learning Network for Segmentation of Temporal Bone Anatomy in Cone-Beam CT Imaging",
+                contributors: "Andy S Ding, Alexander Lu, <b>Zhaoshuo Li</b>, Manish Sahu, Deepa Galaiya, Jeffrey H Siewerdsen, Mathias Unberath, Russell H Taylor, Francis X Creighton",
+                conference: "Otolaryngology-Head and Neck Surgery 2023",
+                projectPageLink: "https://aao-hnsfjournals.onlinelibrary.wiley.com/doi/10.1002/ohn.317"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Statistical Shape Model of the Temporal Bone Using Segmentation Propagation",
+                contributors: "Andy S Ding, Alexander Lu, <b>Zhaoshuo Li</b>, Deepa Galaiya, Masaru Ishii, Jeffrey H Siewerdsen, Russell H Taylor, Francis X Creighton",
+                conference: "Otology & Neurotology 2022",
+                projectPageLink: "https://journals.lww.com/otology-neurotology/Abstract/2022/07000/Statistical_Shape_Model_of_the_Temporal_Bone_Using.26.aspx?context=LatestArticles"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Automated Extraction of Anatomical Measurements From Temporal Bone CT Imaging",
+                contributors: "Andy S Ding, Alexander Lu, <b>Zhaoshuo Li</b>, Deepa Galaiya, Masaru Ishii, Jeffrey H Siewerdsen, Russell H Taylor, Francis X Creighton",
+                conference: "Otolaryngology-Head and Neck Surgery 2022",
+                projectPageLink: "https://journals.sagepub.com/doi/abs/10.1177/01945998221076801"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Automated registration-based temporal bone computed tomography segmentation for applications in neurotologic surgery",
+                contributors: "Andy S Ding, Alexander Lu, <b>Zhaoshuo Li</b>, Deepa Galaiya, Jeffrey H Siewerdsen, Russell H Taylor, Francis X Creighton",
+                conference: "Otolaryngology-Head and Neck Surgery 2021",
+                projectPageLink: "https://journals.sagepub.com/doi/abs/10.1177/01945998211044982"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "An Interpretable Approach to Automated Severity Scoring in Pelvic Trauma",
+                contributors: "Anna Zapaishchykova, David Dreizin, <b>Zhaoshuo Li</b>, Jie Ying Wu, Shahrooz Faghih Roohi, Mathias Unberath",
+                conference: "MICCAI 2021",
+                projectPageLink: "https://arxiv.org/abs/2105.10238"
+            },
+            {
+                theme: "Previous Work",
+                paperTitle: "Volumetric Accuracy Analysis of Virtual Safety Barriers for Cooperative-Control Robotic Mastoidectomy",
+                contributors: "Andy S Ding, Sarah Capostagno, Christopher R Razavi, <b>Zhaoshuo Li</b>, Russell H Taylor, John P Carey, Francis X Creighton",
+                conference: "Otology & Neurotology 2021",
+                projectPageLink: "https://www.ingentaconnect.com/content/wk/mao/2021/00000042/00000010/art00025"
+            }
+        ];
+
+        const researchThemes = [
+            "Embodied AI",
+            "Multimodal Generation",
+            "3D Generation & Reconstruction",
+            "Previous Work"
+        ];
+
+        const showcasePriority = {
+            "Embodied AI": [
+                "CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models",
+                "One-Step Diffusion Policy: Fast Visuomotor Policies via Diffusion Distillation",
+                "Openpi Comet: Competition Solution For 2025 BEHAVIOR Challenge"
+            ],
+            "3D Generation & Reconstruction": [
+                "SAGE: Scalable Agentic 3D Scene Generation for Embodied AI",
+                "Scenethesis: A Language and Vision Agentic Framework for 3D Scene Generation",
+                "Neuralangelo: High-Fidelity Neural Surface Reconstruction",
+                "Revisiting stereo depth estimation from a sequence-to-sequence perspective with transformers"
+            ]
+        };
+
+        function prioritizePublications(theme, themePublications) {
+            const priority = showcasePriority[theme] || [];
+            return [...themePublications].sort((a, b) => {
+                const aIndex = priority.indexOf(a.paperTitle);
+                const bIndex = priority.indexOf(b.paperTitle);
+
+                if (aIndex === -1 && bIndex === -1) {
+                    return 0;
+                }
+                if (aIndex === -1) {
+                    return 1;
+                }
+                if (bIndex === -1) {
+                    return -1;
+                }
+                return aIndex - bIndex;
+            });
+        }
+
+        function generateMedia(publication) {
+            if (publication.videoSrc.endsWith('.mp4') || publication.videoSrc.endsWith('.webm')) {
+                return `
+                    <video autoplay muted loop playsinline${posterAttr(publication.videoSrc)} oncontextmenu="return false;">
+                        <source src="${publication.videoSrc}" type="${publication.videoSrc.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
+                    </video>
+                `;
+            }
+
+            return `<img src="${publication.videoSrc}" alt="${publication.paperTitle}">`;
+        }
+
+        const keptPosterPaths = new Set([
+            "media/projects/posters/cot-vla.jpg",
+            "media/projects/posters/neuralangelo.jpg",
+            "media/projects/posters/onedp.jpg"
+        ]);
+
+        function posterAttr(videoSrc) {
+            const posterPath = videoSrc.replace('media/projects/', 'media/projects/posters/').replace(/\.(mp4|webm)$/, '.jpg');
+            return keptPosterPaths.has(posterPath) ? ` poster="${posterPath}"` : "";
+        }
+
+        function generateProjectLinks(publication) {
             return `
-                <div class="row align-items-center pub-row">
-                    <div class="col-md-5 text-center">
-                        ${publication.videoSrc.endsWith('.mp4') || publication.videoSrc.endsWith('.webm') ? `
-                        <video width="100%" autoplay muted loop playsinline oncontextmenu="return false;">
-                            <source src="${publication.videoSrc}" type="${publication.videoSrc.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
-                            Your browser does not support the video tag.
-                        </video>
-                        ` : `
-                        <img src="${publication.videoSrc}" width="100%" alt="Publication Image">
-                        `}
-                    </div>
-                    <div class="col-md-7 work-publication">
-                        <div class="details">
-                            <div class="paper">
-                                <a href="${publication.projectPageLink}" class="pub-title">${publication.paperTitle}</a>
-                                <div class="pub-authors">${publication.contributors}</div>
-                                ${publication.conference ? `<div class="pub-venue">${publication.conference}</div>` : ''}
-                            </div>
-                        </div>
-                        <div class="pub-links">
-                            <a href="${publication.pdfLink}" class="pub-btn pub-btn-paper" target="_blank">
-                                <i class="fa-regular fa-file-pdf"></i> Paper
-                            </a>
-                            <a href="#" onclick="showBibtex('${publication.bibtexLink}'); return false;" class="pub-btn pub-btn-bibtex">
-                                <i class="fa-regular fa-note-sticky"></i> Bibtex
-                            </a>
-                            <a href="${publication.projectPageLink}" class="pub-btn pub-btn-project" target="_blank">
-                                <i class="fa fa-external-link"></i> Project
-                            </a>
-                            ${publication.productPageLink ? `
-                            <a href="${publication.productPageLink}" class="pub-btn pub-btn-product" target="_blank">
-                                <i class="fa fa-codepen"></i> Product
-                            </a>` : ''}
-                        </div>
-                    </div>
+                <div class="pub-links">
+                    ${publication.pdfLink ? `
+                    <a href="${publication.pdfLink}" class="pub-btn pub-btn-paper" target="_blank">
+                        <i class="fa-regular fa-file-pdf"></i> Paper
+                    </a>` : ''}
+                    ${publication.bibtexLink ? `
+                    <a href="#" onclick="showBibtex('${publication.bibtexLink}'); return false;" class="pub-btn pub-btn-bibtex">
+                        <i class="fa-regular fa-note-sticky"></i> Bibtex
+                    </a>` : ''}
+                    <a href="${publication.projectPageLink}" class="pub-btn pub-btn-project" target="_blank">
+                        <i class="fa fa-external-link"></i> Project
+                    </a>
+                    ${publication.productPageLink ? `
+                    <a href="${publication.productPageLink}" class="pub-btn pub-btn-product" target="_blank">
+                        <i class="fa fa-codepen"></i> Product
+                    </a>` : ''}
                 </div>
             `;
         }
 
-        // Render publications
-        document.querySelector('.section-publication').insertAdjacentHTML(
-            'beforeend', 
-            publications.map(generatePublicationBlock).join('')
+        function generateLeadProjectCard(publication) {
+            return `
+                <article class="research-lead-card">
+                    <a class="research-card-media" href="${publication.projectPageLink}" target="_blank">
+                        ${generateMedia(publication)}
+                    </a>
+                    <div class="research-card-body">
+                        <a href="${publication.projectPageLink}" class="pub-title" target="_blank">${publication.paperTitle}</a>
+                        ${publication.conference ? `<div class="pub-venue">${publication.conference}</div>` : ''}
+                        <div class="pub-authors">${publication.contributors}</div>
+                        ${generateProjectLinks(publication)}
+                    </div>
+                </article>
+            `;
+        }
+
+        function generateCompactProjectCard(publication) {
+            return `
+                <article class="research-compact-card">
+                    <a class="research-compact-media" href="${publication.projectPageLink}" target="_blank">
+                        ${generateMedia(publication)}
+                    </a>
+                    <div class="research-compact-body">
+                        <a href="${publication.projectPageLink}" class="compact-title" target="_blank">${publication.paperTitle}</a>
+                        ${publication.conference ? `<div class="pub-venue">${publication.conference}</div>` : ''}
+                    </div>
+                </article>
+            `;
+        }
+
+        function generateCompactPublicationBlock(publication) {
+            return `
+                <li class="compact-publication">
+                    <a href="${publication.projectPageLink}" class="compact-title" target="_blank">${publication.paperTitle}</a>
+                    <div class="pub-authors">${publication.contributors}</div>
+                    ${publication.conference ? `<div class="pub-venue">${publication.conference}</div>` : ''}
+                </li>
+            `;
+        }
+
+        function generateResearchTheme(theme) {
+            const featured = prioritizePublications(
+                theme,
+                publications.filter(publication => publication.theme === theme)
+            );
+            const showcased = featured.slice(0, 3);
+            const listed = featured.slice(3)
+                .concat(publications.filter(publication => publication.theme === `${theme} List`))
+                .concat(additionalPublications.filter(publication => publication.theme === theme));
+
+            if (!showcased.length && !listed.length) {
+                return "";
+            }
+
+            const themeContent = `
+                    ${showcased.length ? `
+                    <div class="research-showcase${showcased.length === 1 ? ' research-showcase-single' : ''}">
+                        ${generateLeadProjectCard(showcased[0])}
+                        ${showcased.length > 1 ? `<div class="research-compact-list">${showcased.slice(1).map(generateCompactProjectCard).join('')}</div>` : ''}
+                    </div>` : ''}
+                    ${listed.length && theme !== "Previous Work" ? `
+                    <details class="compact-publication-details">
+                        <summary class="compact-publication-heading">Additional papers</summary>
+                        <ul class="compact-publication-list">${listed.map(generateCompactPublicationBlock).join('')}</ul>
+                    </details>` : ''}
+                    ${listed.length && theme === "Previous Work" ? `
+                    <ul class="compact-publication-list compact-publication-list-direct">${listed.map(generateCompactPublicationBlock).join('')}</ul>` : ''}
+            `;
+
+            if (theme === "Previous Work") {
+                return `
+                    <section class="research-theme research-theme-collapsed">
+                        <details class="research-theme-details">
+                            <summary class="research-theme-title research-theme-summary"><span>${theme}</span></summary>
+                            <div class="research-theme-body">${themeContent}</div>
+                        </details>
+                    </section>
+                `;
+            }
+
+            return `
+                <section class="research-theme">
+                    <h3 class="research-theme-title"><span>${theme}</span></h3>
+                    ${themeContent}
+                </section>
+            `;
+        }
+
+        document.querySelector('.research-groups').insertAdjacentHTML(
+            'beforeend',
+            researchThemes.map(generateResearchTheme).join('')
         );
     </script>
     
     <style>
-        .pub-row {
-            margin-bottom: 28px;
-            padding-bottom: 28px;
-            border-bottom: 1px solid #f0f0f0;
+        .section-publication {
+            --showcase-gap: 16px;
         }
-        
-        .pub-row:last-child {
-            border-bottom: none;
+
+        .foundation-work {
             margin-bottom: 0;
-            padding-bottom: 0;
         }
-        
-        .pub-title {
+
+        .research-work {
+            margin-top: 36px;
+            padding-top: 36px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .section-title-research {
+            margin-bottom: 20px;
+        }
+
+        .foundation-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: var(--showcase-gap);
+            align-items: start;
+        }
+
+        .foundation-card,
+        .foundation-compact {
+            border: 1px solid #e1e6e8;
+            border-radius: 8px;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .foundation-card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .foundation-media {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #f3f6f7;
+            overflow: hidden;
+        }
+
+        .foundation-media video,
+        .foundation-compact video {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .foundation-media video {
+            object-fit: cover;
+        }
+
+        .foundation-body {
+            padding: 18px;
+        }
+
+        .foundation-body h4 {
+            font-size: 1.08rem;
+            line-height: 1.35;
+            margin: 0;
+        }
+
+        .foundation-role {
+            margin-top: 8px;
+            color: #5b6770;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .foundation-body h4 a,
+        .foundation-body h4 a:visited {
+            color: #212529;
+            text-decoration: none;
+        }
+
+        .foundation-body h4 a:hover {
             color: #0085A1;
+            text-decoration: underline;
+        }
+
+        .foundation-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .foundation-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            min-height: 30px;
+            padding: 0 10px;
+            border: 1px solid #d8e8ec;
+            border-radius: 6px;
+            color: #0085A1;
+            background: #ffffff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .foundation-links a:hover {
+            border-color: #0085A1;
+            background: #0085A1;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .foundation-links a i {
+            color: currentColor;
+        }
+
+        .foundation-compact-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: var(--showcase-gap);
+            align-items: stretch;
+        }
+
+        .foundation-compact {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            height: 100%;
+            padding: 0;
+            border-top: 0;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .foundation-compact:hover {
+            border-color: #b8d8df;
+            background: #fbfdfe;
+            text-decoration: none;
+        }
+
+        .foundation-compact video {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+            border-radius: 0;
+            border-bottom: 1px solid #edf1f3;
+            background: #ffffff;
+            object-fit: contain;
+            padding: 0;
+        }
+
+        .foundation-compact span {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 0;
+            padding: 12px;
+        }
+
+        .foundation-compact strong {
+            color: #212529;
+            font-size: 0.92rem;
+            line-height: 1.3;
+        }
+
+        .foundation-compact small {
+            color: #5b6770;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .research-groups {
+            display: grid;
+            gap: 32px;
+        }
+
+        .research-theme {
+            padding-top: 0;
+        }
+
+        .research-theme:first-child {
+            padding-top: 0;
+        }
+
+        .research-theme-title {
+            display: flex;
+            align-items: center;
+            margin: 0 0 15px;
+            color: #212529;
+            font-size: 0.94rem;
+            font-weight: 800;
+            line-height: 1.3;
+            letter-spacing: 0.035em;
+            text-transform: uppercase;
+        }
+
+        .research-theme-title span {
+            position: relative;
+            flex: 0 1 auto;
+            min-width: 0;
+        }
+
+        .research-theme-title span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 32px;
+            height: 2px;
+            border-radius: 999px;
+            background: #0085A1;
+        }
+
+        .research-theme-details {
+            margin: 0;
+        }
+
+        .research-theme-summary {
+            margin-bottom: 0;
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .research-theme-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .research-theme-summary::after {
+            content: "+";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #d8e8ec;
+            border-radius: 6px;
+            color: #0085A1;
+            font-size: 0.78rem;
+            line-height: 1;
+            background: #ffffff;
+            flex: 0 0 auto;
+            margin-left: auto;
+        }
+
+        .research-theme-details[open] .research-theme-summary {
+            margin-bottom: 14px;
+        }
+
+        .research-theme-details[open] .research-theme-summary::after {
+            content: "-";
+        }
+
+        .research-theme-body {
+            display: grid;
+            gap: 0;
+        }
+
+        .research-showcase {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: var(--showcase-gap);
+            align-items: start;
+        }
+
+        .research-showcase-single {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .research-lead-card,
+        .research-compact-card {
+            border: 1px solid #e1e6e8;
+            border-radius: 8px;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .research-lead-card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .research-card-media,
+        .research-compact-media {
+            display: block;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .research-card-media {
+            width: 100%;
+            aspect-ratio: 21 / 9;
+            max-height: 340px;
+        }
+
+        .research-card-media video,
+        .research-card-media img,
+        .research-compact-media video,
+        .research-compact-media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .research-card-body {
+            padding: 16px;
+        }
+
+        .research-compact-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: var(--showcase-gap);
+            align-items: stretch;
+        }
+
+        .research-compact-card {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            height: 100%;
+        }
+
+        .research-compact-card:hover {
+            border-color: #b8d8df;
+            background: #fbfdfe;
+        }
+
+        .research-compact-media {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-bottom: 1px solid #edf1f3;
+        }
+
+        .research-compact-body {
+            min-width: 0;
+            padding: 12px;
+        }
+
+        .pub-title,
+        .pub-title:visited,
+        .compact-title,
+        .compact-title:visited {
+            display: block;
+            color: #212529;
             font-weight: 600;
-            font-size: 1.05rem;
             text-decoration: none;
             line-height: 1.4;
         }
+
+        .pub-title {
+            font-size: 1.02rem;
+        }
+
+        .compact-title {
+            font-size: 0.9rem;
+        }
         
-        .pub-title:hover {
+        .pub-title:hover,
+        .compact-title:hover {
+            color: #0085A1;
             text-decoration: underline;
         }
         
         .pub-authors {
             font-size: 0.9rem;
-            color: #555;
+            color: #5b6770;
             margin-top: 6px;
             line-height: 1.5;
         }
@@ -266,6 +963,26 @@
             color: #0085A1;
             margin-top: 4px;
             font-weight: 500;
+        }
+
+        .research-compact-body .pub-venue {
+            font-size: 0.78rem;
+            line-height: 1.35;
+        }
+
+        .award {
+            display: inline-flex;
+            align-items: center;
+            padding: 1px 6px;
+            border: 1px solid #b8d8df;
+            border-radius: 999px;
+            background: #e8f4f8;
+            color: #0085A1;
+            font-size: 0.76em;
+            font-weight: 800;
+            line-height: 1.35;
+            vertical-align: middle;
+            white-space: nowrap;
         }
         
         .pub-links {
@@ -280,66 +997,110 @@
             align-items: center;
             gap: 6px;
             padding: 6px 14px;
-            border-radius: 20px;
+            border: 1px solid #d8e8ec;
+            border-radius: 6px;
+            background: #ffffff;
+            color: #0085A1;
             font-size: 0.85rem;
-            font-weight: 500;
+            font-weight: 700;
             text-decoration: none;
             transition: all 0.2s ease;
         }
         
         .pub-btn i {
             font-size: 0.9rem;
+            color: currentColor;
         }
         
-        .pub-btn-paper {
-            background: #f8f8f8;
-            color: #6b7280;
-            border: 1px solid #e5e5e5;
+        .pub-btn:hover,
+        .pub-btn:focus {
+            background: #0085A1;
+            color: #ffffff;
+            border-color: #0085A1;
+            text-decoration: none;
         }
-        
-        .pub-btn-paper:hover {
-            background: #6b7280;
-            color: #fff;
-            border-color: #6b7280;
+
+        .compact-publication-details {
+            margin: 18px 0 8px;
         }
-        
-        .pub-btn-bibtex {
-            background: #f8f8f8;
-            color: #6b7280;
-            border: 1px solid #e5e5e5;
+
+        .compact-publication-heading {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #5b6770;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            cursor: pointer;
+            list-style: none;
         }
-        
-        .pub-btn-bibtex:hover {
-            background: #6b7280;
-            color: #fff;
-            border-color: #6b7280;
+
+        .compact-publication-heading::-webkit-details-marker {
+            display: none;
         }
-        
-        .pub-btn-project {
-            background: #f0f7f9;
-            color: #5a9aa8;
+
+        .compact-publication-heading::before {
+            content: "+";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
             border: 1px solid #d8e8ec;
+            border-radius: 50%;
+            color: #0085A1;
+            font-size: 0.72rem;
+            line-height: 1;
+        }
+
+        .compact-publication-details[open] .compact-publication-heading::before {
+            content: "-";
+        }
+
+        .compact-publication-list {
+            list-style: none;
+            margin: 8px 0 0;
+            padding: 0;
+        }
+
+        .compact-publication-list-direct {
+            margin-top: 0;
+        }
+
+        .compact-publication {
+            padding: 12px 0;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .compact-publication:first-child {
+            border-top: none;
+        }
+
+        .compact-publication .pub-authors {
+            font-size: 0.84rem;
+            margin-top: 4px;
+        }
+
+        .compact-publication .pub-venue {
+            font-size: 0.84rem;
         }
         
-        .pub-btn-project:hover {
-            background: #5a9aa8;
-            color: #fff;
-            border-color: #5a9aa8;
-        }
-        
-        .pub-btn-product {
-            background: #f5f3f7;
-            color: #7d7094;
-            border: 1px solid #e5e0ec;
-        }
-        
-        .pub-btn-product:hover {
-            background: #7d7094;
-            color: #fff;
-            border-color: #7d7094;
-        }
-        
-        @media (max-width: 576px) {
+        @media (max-width: 900px) {
+            .foundation-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .research-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            .foundation-compact-list,
+            .research-compact-list {
+                grid-template-columns: 1fr;
+            }
+
             .pub-links {
                 gap: 6px;
             }

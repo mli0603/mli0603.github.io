@@ -8,56 +8,156 @@
     </h2>
     <div class="about-text">
         <p>
-            I am a Tech Lead at NVIDIA's <a href="https://research.nvidia.com/labs/cosmos-lab/">Cosmos Lab</a>, where I work on world model pretraining.
-            My research focuses on autonomous intelligence &mdash; building systems that perceive, reason, and act in the physical world.
+            I am a Tech Lead at NVIDIA's <a href="https://research.nvidia.com/labs/cosmos-lab/">Cosmos Lab</a>.
+            I believe deeply in the future of Physical AI &mdash; systems that can learn in context, self-calibrate, and adapt to the physical world.
+            The path there will be driven by great data and powerful scaling.
         </p>
-        
+
         <p>
-            My research has been integrated into products including <a href="https://www.nvidia.com/en-us/ai/cosmos/">NVIDIA Cosmos</a> and <a href="https://www.nvidia.com/en-us/gpu-cloud/edify/">NVIDIA Edify</a>, 
-            and has received recognition including TIME's Best Inventions of 2023 and Best AI & Best Overall at CES 2025.
+            My research has been integrated into products including <a href="https://www.nvidia.com/en-us/ai/cosmos/">NVIDIA Cosmos</a> and NVIDIA Edify,
+            and has received recognition including <a href="https://research.nvidia.com/labs/cosmos-lab/neuralangelo/">TIME's Best Inventions of 2023</a> and <a href="https://research.nvidia.com/labs/cosmos-lab/cosmos-predict1/">Best AI &amp; Best Overall at CES 2025</a>.
         </p>
-        
+
         <p>
-            I obtained my Ph.D. from Johns Hopkins University, advised by <a href="https://engineering.jhu.edu/faculty/mathias-unberath/">Dr. Mathias Unberath</a> and <a href="https://engineering.jhu.edu/faculty/russell-taylor/">Dr. Russell H Taylor</a>, 
+            I obtained my Ph.D. from Johns Hopkins University, advised by <a href="https://engineering.jhu.edu/faculty/mathias-unberath/">Dr. Mathias Unberath</a> and <a href="https://engineering.jhu.edu/faculty/russell-taylor/">Dr. Russell H Taylor</a>,
             and my Bachelor's from University of British Columbia, advised by <a href="https://ece.ubc.ca/tim-salcudean/">Dr. Tim Salcudean</a>.
             I have been fortunate to collaborate with brilliant minds at NVIDIA, Meta Reality Labs, Intuitive, UBC and JHU.
         </p>
     </div>
-    
+
+    <div class="intro-links" aria-label="Contact and profile links">
+        <a href="https://mli0603.notion.site/Max-s-blog-2f3a341372738083a444c85238bd47a9" class="intro-link">
+            <i class="fas fa-pen-nib"></i>
+            <span>Blog</span>
+        </a>
+        <a href="mailto:maxzhaoshuol@nvidia.com" class="intro-link">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+        </a>
+        <a href="https://scholar.google.ca/citations?user=oc7JNSwAAAAJ&hl=en" class="intro-link" target="_blank">
+            <i class="ai ai-google-scholar"></i>
+            <span>Scholar</span>
+        </a>
+        <a href="https://www.linkedin.com/in/max-zhaoshuo-li/" class="intro-link" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/mli0603" class="intro-link" target="_blank">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </a>
+        <a href="https://twitter.com/mli0603" class="intro-link" target="_blank">
+            <i class="fab fa-x-twitter"></i>
+            <span>Twitter/X</span>
+        </a>
+    </div>
+
     <style>
         .section-about-me {
             margin-bottom: 5px;
         }
-        
+
         .about-text {
             line-height: 1.7;
+            margin-left: 38px;
         }
-        
+
         .about-text p {
             margin: 0 0 12px 0;
         }
-        
+
         .about-text p:last-child {
             margin-bottom: 0;
         }
-        
+
         .about-text strong {
             color: #333;
             font-weight: 600;
         }
-        
+
         .about-text a {
             font-weight: 500;
             text-decoration: none;
         }
-        
+
         .about-text a:hover {
             text-decoration: underline;
         }
+
+        .intro-links {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 8px;
+            margin: 18px 0 0 38px;
+        }
+
+        .intro-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            min-width: 0;
+            min-height: 32px;
+            padding: 0 12px;
+            border: 1px solid #e1e6e8;
+            border-radius: 6px;
+            background: #ffffff;
+            color: #5b6770;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .intro-link:hover {
+            background: #0085A1;
+            border-color: #0085A1;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        .intro-link i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 16px;
+            font-size: 13px;
+            line-height: 1;
+            text-align: center;
+        }
+
+        .intro-link .ai-google-scholar {
+            font-size: 16px;
+            transform: translateY(1px);
+        }
+
+        .intro-link .fa-linkedin-in {
+            font-size: 15px;
+        }
+
+        .intro-link span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 900px) {
+            .about-text,
+            .intro-links {
+                margin-left: 0;
+            }
+
+            .intro-links {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 7px;
+            }
+
+            .intro-link {
+                font-size: 0.8rem;
+                padding: 0 10px;
+            }
+        }
     </style>
 </section>
-
-<div class="fun-fact">
-    <i class="fas fa-chart-bar"></i>
-    <em>Modelling P(text, pixel, action).</em>
-</div>
