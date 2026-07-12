@@ -82,7 +82,7 @@
                 projectPageLink: "https://nvlabs.github.io/sage/"
             },
             {
-                theme: "Multimodal Generation",
+                theme: "Previous Work",
                 videoSrc: "media/projects/duogen.mp4",
                 paperTitle: "DuoGen: Towards General Purpose Interleaved Multimodal Generation",
                 contributors: "Min Shi, Xiaohui Zeng, Jiannan Huang, Yin Cui, Francesco Ferroni, Jialuo Li, Shubham Pachori, <b>Zhaoshuo Li</b>, Yogesh Balaji, Haoxiang Wang, Tsung-Yi Lin, Xiao Fu, Yue Zhao, Chieh-Yun Chen, Ming-Yu Liu, Humphrey Shi",
@@ -90,6 +90,16 @@
                 pdfLink: "https://arxiv.org/abs/2602.00508",
                 bibtexLink: "bib/shi2026duogengeneralpurposeinterleaved.bib",
                 projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/duogen/"
+            },
+            {
+                theme: "Embodied AI",
+                videoSrc: "media/projects/sc3_eval.mp4",
+                paperTitle: "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
+                contributors: "Wei-Cheng Tseng, Gashon Hussein, Yuzhu Dong, Allen Z. Ren, Lucy X. Shi, XuDong Wang, Sergey Levine, <b>Zhaoshuo Li</b>, Jinwei Gu, Florian Shkurti, Ming-Yu Liu, Quan Vuong",
+                conference: "arXiv 2026",
+                pdfLink: "https://arxiv.org/abs/2606.18610",
+                bibtexLink: "bib/tseng2026sc3eval.bib",
+                projectPageLink: "https://weichengtseng.github.io/sc3-eval/"
             },
             {
                 theme: "Embodied AI",
@@ -151,7 +161,7 @@
                 projectPageLink: "https://research.nvidia.com/labs/cosmos-lab/artiscene/"
             },
             {
-                theme: "Embodied AI",
+                theme: "Embodied AI List",
                 videoSrc: "media/projects/onedp.mp4",
                 paperTitle: "One-Step Diffusion Policy: Fast Visuomotor Policies via Diffusion Distillation",
                 contributors: "Zhendong Wang, <b>Zhaoshuo Li</b>, Ajay Mandlekar, Zhenjia Xu, Jiaojiao Fan, Yashraj Narang, Linxi Fan, Yuke Zhu, Yogesh Balaji, Mingyuan Zhou, Ming-Yu Liu, Yu Zeng",
@@ -404,15 +414,14 @@
 
         const researchThemes = [
             "Embodied AI",
-            "Multimodal Generation",
             "3D Generation & Reconstruction",
             "Previous Work"
         ];
 
         const showcasePriority = {
             "Embodied AI": [
+                "SC3-Eval: Evaluating Robot Foundation Models via Self-Consistent Video Generation",
                 "CoT-VLA: Visual Chain-of-Thought Reasoning for Vision-Language-Action Models",
-                "One-Step Diffusion Policy: Fast Visuomotor Policies via Diffusion Distillation",
                 "Openpi Comet: Competition Solution For 2025 BEHAVIOR Challenge"
             ],
             "3D Generation & Reconstruction": [
@@ -532,8 +541,8 @@
                 theme,
                 publications.filter(publication => publication.theme === theme)
             );
-            const showcased = featured.slice(0, 3);
-            const listed = featured.slice(3)
+            const showcased = theme === "Previous Work" ? [] : featured.slice(0, 3);
+            const listed = (theme === "Previous Work" ? featured : featured.slice(3))
                 .concat(publications.filter(publication => publication.theme === `${theme} List`))
                 .concat(additionalPublications.filter(publication => publication.theme === theme));
 
